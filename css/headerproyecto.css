@@ -12,10 +12,11 @@ ul {
 
 body {
 	background-color: white;
+	font-family: 'Roboto', sans-serif;
 }
 
 
-.conteiner {
+.container {
   max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
@@ -107,19 +108,101 @@ body {
     color: black;
     }
 
-  .main-nav a:hover {
-    background-color: #c1c1c1;
-  }
+.main-nav a:hover {
+  background-color: #c1c1c1;
+}
 
-  .main-nav a:hover::after{
+.main-nav a:hover::after{
 
-      position: absolute;
-      content: "";
-      top: 100%;
-      margin-left: -50%;
-      border-style: solid;
-      border-width: 10px 10px 0 10px;
-      border-color: #c1c1c1 transparent;
-      line-height: 0px;
+    position: absolute;
+    content: "";
+    top: 100%;
+    margin-left: -50%;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #c1c1c1 transparent;
+    line-height: 0px;
+}
 
-  }
+.espacio_vacio{
+		max-width: 1200px;
+		height: 100px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: white;
+
+}
+
+footer{
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: white;
+		position: relative; /* Analizar si sirve */
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+}
+
+.footer_top{
+		flex-direction: row;
+}
+
+.footer_col_1{
+		width: 33%;
+		position: relative;
+		text-decoration: none;
+		color: black;
+		text-align: center;
+		display: block;
+		float: left;
+}
+
+.footer_col_2{
+		width: 33%;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		text-decoration: none;
+		color: black;
+		text-align: center;
+		display: block;
+		float:left;
+
+}
+
+.footer_col_3{
+		width: 33%;
+		position: relative;
+		text-decoration: none;
+		color: black;
+		text-align: center;
+		display: block;
+		float: right;
+}
+
+.footer_col_1 a{
+		text-align: left;
+		display: block;
+
+}
+
+.footer_col_2 a{
+		text-align: left;
+		display: block;
+}
+
+.footer_col_3 a{
+		text-align: left;
+		display: block;
+}
+
+ul .footer_list{
+		text-align: left;
+}
+
+div .copyright{
+		display: block;
+		position: absolute;
+}
