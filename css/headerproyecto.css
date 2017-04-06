@@ -35,12 +35,12 @@ body {
 	text-align: center;
   }
 
-.main-header img{
+.imagen{
 	position: absolute;
-	margin-top: 3px;
-	width: 300px;
-	clip:rect(10px 200px 130px 100px);
-	left: -70px;
+	margin-top: 25px;
+	width: 100px;
+	/*clip:rect(10px 200px 130px 100px);*/
+	left: 60px;
 }
 
 .login {
@@ -49,7 +49,7 @@ body {
 	background-color: white;
 	width: 340px;
 	top:10px;
-	right: -3px;
+	right: -60px;
 	margin-right: auto;
 	text-align: center;
 	display: flex;
@@ -86,7 +86,7 @@ body {
 .main-nav ul{
 	width: 1000px;
 	list-style: none;
-	margin-left: 185px;
+	margin-left: 240px;
 	display: flex;
 	margin-bottom: 70px;
 }
@@ -112,7 +112,7 @@ body {
   background-color: #c1c1c1;
 }
 
-.main-nav a:hover::after{
+/*.main-nav a:hover::after{
 
     position: absolute;
     content: "";
@@ -122,7 +122,7 @@ body {
     border-width: 10px 10px 0 10px;
     border-color: #c1c1c1 transparent;
     line-height: 0px;
-}
+}*/
 
 .espacio_vacio{
 		max-width: 1200px;
@@ -134,9 +134,9 @@ body {
 }
 
 footer{
-		max-width: 1200px;
+		max-width: 1180px;
 		margin-left: auto;
-		margin-right: auto;
+		margin-right: 30px;
 		background-color: white;
 		position: relative; /* Analizar si sirve */
 		text-decoration: none;
@@ -147,10 +147,17 @@ footer{
 
 .footer_top{
 		flex-direction: row;
+		margin-left: 10px;
+		margin-right: 10px;
+}
+
+.footer_top h4{
+margin-bottom: 20px;
+text-align: left;
 }
 
 .footer_col_1{
-		width: 33%;
+		width: 20%;
 		position: relative;
 		text-decoration: none;
 		color: black;
@@ -160,7 +167,7 @@ footer{
 }
 
 .footer_col_2{
-		width: 33%;
+		width: 60%;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
@@ -169,17 +176,24 @@ footer{
 		text-align: center;
 		display: block;
 		float:left;
+}
 
+.footer_col_2 h4{
+	text-align: center;
 }
 
 .footer_col_3{
-		width: 33%;
+		width: 20%;
 		position: relative;
 		text-decoration: none;
 		color: black;
 		text-align: center;
 		display: block;
 		float: right;
+}
+
+.footer_col_3 h4{
+	text-align: right;
 }
 
 .footer_col_1 a{
@@ -189,18 +203,19 @@ footer{
 }
 
 .footer_col_2 a{
-		text-align: left;
+		text-align: center;
 		display: block;
 }
 
 .footer_col_3 a{
-		text-align: left;
+		text-align: right;
 		display: block;
 }
 
-ul .footer_list{
-		text-align: left;
+.footer_bottom{
+	margin-top: 20px;
 }
+
 
 div .copyright{
 		display: block;
