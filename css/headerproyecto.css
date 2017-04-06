@@ -20,7 +20,7 @@ body {
   max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: white;
+	background-color: red;
 
   }
 
@@ -40,18 +40,16 @@ body {
 	margin-top: 25px;
 	width: 100px;
 	/*clip:rect(10px 200px 130px 100px);*/
-	left: 60px;
+	left: 0px;
 }
 
 .login {
-	width: 100%;
+	width: 300px;
 	position: absolute;
 	background-color: white;
-	width: 340px;
 	top:10px;
-	right: -60px;
+	right: -10px;
 	margin-right: auto;
-	text-align: center;
 	display: flex;
 }
 
@@ -86,7 +84,7 @@ body {
 .main-nav ul{
 	width: 1000px;
 	list-style: none;
-	margin-left: 240px;
+	margin-left: 190px;
 	display: flex;
 	margin-bottom: 70px;
 }
@@ -103,7 +101,7 @@ body {
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
-		margin-left: 54px;
+		margin-left: 70px;
 		margin-top: 100px;
     color: black;
     }
@@ -136,19 +134,13 @@ body {
 footer{
 		max-width: 1180px;
 		margin-left: auto;
-		margin-right: 30px;
+		margin-right: auto;
 		background-color: white;
 		position: relative; /* Analizar si sirve */
 		text-decoration: none;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-}
-
-.footer_top{
-		flex-direction: row;
-		margin-left: 10px;
-		margin-right: 10px;
 }
 
 .footer_top h4{
