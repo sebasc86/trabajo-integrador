@@ -6,7 +6,7 @@
 }
 
 a {
-outline:0px;
+	outline:0px;
 }
 
 ul {
@@ -37,7 +37,7 @@ body {
 	margin-top: 20px;
 	height: 140px;
 	text-align: center;
-  }
+}
 
 .imagen{
 	position: absolute;
@@ -98,17 +98,16 @@ body {
 }
 
 .main-nav a{
-
-		background-color: white;
-    position: relative;
-    display: block;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-		margin-left: 70px;
-		margin-top: 100px;
-    color: black;
-    }
+	background-color: white;
+	position: relative;
+	display: block;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 70px;
+	margin-top: 100px;
+	color: black;
+}
 
 .main-nav a:hover {
   background-color: #c1c1c1;
