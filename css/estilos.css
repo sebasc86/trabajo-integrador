@@ -55,7 +55,13 @@ body {
 	display: none;
 }
 
+<<<<<<< HEAD
+=======
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> master
+>>>>>>> Stashed changes
 .main-nav ul{
 	max-width: 1000px;
 	list-style: none;
@@ -111,6 +117,7 @@ h1{
   text-align: left;
   margin-bottom: 20px;
   padding-left: 25px;
+  color: #333333;
 
 }
 
@@ -257,6 +264,39 @@ button:hover{
   text-align: justify;
 }
 
+.registro{
+  margin-bottom: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registro_form{
+  padding-top: 50px;
+  display: flex;
+  flex-flow: column;
+  max-width: 320px;
+  align-items: flex-start;
+  position: 50%;
+}
+
+.registro_form_1{
+
+
+}
+
+.registro_button{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  width: 150px;
+  height: 50px;
+  line-height: 0px;
+  border-radius: 5px;
+  margin-top: 35px;
+}
+
 .espacio_vacio{
 		max-width: auto;
 		height: 20px;
@@ -287,7 +327,14 @@ button:hover{
   width: 20%;
   margin-right: 160px;
   margin-left: -30px;
+<<<<<<< Updated upstream
+=======
 
+}
+>>>>>>> Stashed changes
+
+.columna1 label{
+  margin-left: -50px;
 }
 
 .columna1 label{
