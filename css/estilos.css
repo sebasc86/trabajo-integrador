@@ -17,6 +17,7 @@ body {
 	margin-right: auto;
   border-bottom: 1px black;
   max-width: 1200px;
+  border-radius: 5px;
 }
 
 .container ul{
@@ -37,7 +38,7 @@ body {
 	position: absolute;
 	margin-top: 25px;
 	width: 200px;
-	left: 40px;
+	left: 20px;
 }
 
 
@@ -106,9 +107,17 @@ body {
   color: black;
 }
 
+h1{
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 25px;
+
+}
+
 .home_content_1{
   background-color: none;
   height: auto;
+
 }
 
 .home_main_image{
@@ -135,6 +144,89 @@ body {
   align-self: center;
 }
 
+.home_content_2{
+  margin-bottom: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home_content_2_txt{
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 50px;
+}
+
+.home_benefits div{
+  display: inline-block;
+}
+
+section{
+  display: block;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.home_benef_img{
+  display: list-item;
+}
+
+.home_content_3{
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: lightgrey;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home_content_3_txt{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.home_button{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  width: 150px;
+  height: 50px;
+  line-height: 0px;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: rgb(130, 123, 123);
+}
+
+.home_content_4{
+  padding-top: 20px;
+  padding-bottom: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home_content_4_txt{
+  padding-bottom: 20px;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.home_content_4_faq_1_txt{
+  text-align: justify;
+}
+
+.home_content_4_faq_2_txt{
+  text-align: justify;
+}
+
+.home_content_4_faq_3_txt{
+  text-align: justify;
+}
+
 .espacio_vacio{
 		max-width: auto;
 		height: 20px;
@@ -150,6 +242,7 @@ body {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
   }
 
 .footer_top{
@@ -195,11 +288,16 @@ body {
   padding-left: 10%;
 }
 
+.label_footer_col{
+  line-height: 25px;
+}
+
 footer a{
   outline:0px;
   text-decoration: none;
   color: white;
   font-size: 0.9em;
+  line-height: 25px;
 }
 
 .footer_bottom{
@@ -312,13 +410,11 @@ footer a{
     margin-right: auto;
     }
 
-
     .columna1{
       height: 150px;
       width: 230px  ;
       margin-left: -30px;
       margin-right: 0;
-
     }
 
     .columna2{
@@ -357,20 +453,20 @@ footer a{
 
     }
     .columna1 a{
-      font-size: 22px;
-      
+      font-size: 0.8em;
+
     }
     .columna2 a{
-      font-size: 22px;
+      font-size: 0.8em;
     }
 
     .columna3 a{
-      font-size: 22px;
+      font-size: 0.8em;
     }
 
     footer label{
       margin-left: 20px;
-      font-size: 20px;
+      font-size: 1em;
     }
 
     footer a{
