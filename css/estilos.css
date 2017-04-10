@@ -16,7 +16,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
   border-bottom: 1px black;
-  max-width: 1200px;
+  max-width: 98%;
   border-radius: 5px;
 }
 
@@ -26,6 +26,7 @@ body {
 }
 
 .main-header {
+
 	display: flex;
   position: relative;
 	margin-left: auto;
@@ -55,9 +56,8 @@ body {
 }
 
 
-
 .main-nav ul{
-	width: 1000px;
+	max-width: 1000px;
 	list-style: none;
 	margin-left: 190px;
 	display: flex;
@@ -120,20 +120,13 @@ h1{
 
 }
 
-.home_main_image{
-  width: auto;
-  min-height: auto;
-  /* height: 55vh; */
-  background-position: 50% 20%;
-  display: flex;
-  position: relative;
-}
+
 
 .home_main_image img{
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 1200px;
+  width: 98%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -146,9 +139,14 @@ h1{
 
 .home_content_2{
   margin-bottom: 50px;
-  max-width: 1200px;
+  margin-top: 20px;
+  max-width: 98%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.home_content_2 h1{
+  margin-left: -10px;
 }
 
 .home_content_2_txt{
@@ -158,9 +156,34 @@ h1{
   margin-bottom: 50px;
 }
 
-.home_benefits div{
-  display: inline-block;
+.home_benefits {
+  display: flex;
 }
+
+.home_benefits_1{
+  width: 50%;
+}
+
+.home_benefits_2{
+  margin-top: -10px;
+  width: 50%
+}
+
+.home_benefits_3{
+  width: 50%;
+}
+
+.home_benefits_4{
+  margin-top: 5px;
+  width: 50%
+}
+
+.home_benef_img{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 
 section{
   display: block;
@@ -176,7 +199,7 @@ section{
   padding-top: 20px;
   padding-bottom: 50px;
   background-color: lightgrey;
-  max-width: 1200px;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -204,15 +227,22 @@ button:hover{
 .home_content_4{
   padding-top: 20px;
   padding-bottom: 50px;
-  max-width: 1200px;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 
+.home_content_4 h1 {
+  margin-left: -25px;
+}
+
+
 .home_content_4_txt{
+
   padding-bottom: 20px;
   padding-left: 25px;
   text-align: left;
+  margin-left: -25px;
 }
 
 .home_content_4_faq_1_txt{
@@ -239,7 +269,7 @@ button:hover{
   background-color: #4CAF50;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 1200px;
+  width: 98%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -254,21 +284,36 @@ button:hover{
 
 .columna1{
   height: 150px;
-  width: 200px;
-  margin-right: 200px;
+  width: 20%;
+  margin-right: 160px;
+  margin-left: -30px;
 
+}
+
+.columna1 label{
+  margin-left: -50px;
 }
 
 .columna2{
-  height: 150px;
-  width: 200px;
+  width: 30%;
+  height: 100%;
+  margin-right: 30px;
 }
 
-.columna3{
-  height: 150px;
-  width: 200px;
-  margin-left: 200px;
+.columna2 label{
+  margin-left: -140px;
+
 }
+.columna3{
+  width: 20%;
+  margin-right: -70px;
+}
+
+.columna3 label{
+  margin-left: -60px;
+}
+
+
 
 .columna1 li{
   list-style: none;
@@ -290,13 +335,17 @@ button:hover{
 
 .label_footer_col{
   line-height: 25px;
+
 }
+
+
+
 
 footer a{
   outline:0px;
   text-decoration: none;
   color: white;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 25px;
 }
 
@@ -314,7 +363,11 @@ footer a{
       	margin-left: auto;
       	margin-right: auto;
         border-bottom: 1px black;
-        width: 950px;
+        max-width: 950px;
+      }
+
+      .espacio_vacio{
+        max-width: 98vw;
       }
 
       .main-nav ul{
@@ -332,7 +385,60 @@ footer a{
       }
 
       .home_main_image img{
-        width: 950px;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+
+
+      .home_content_2 {
+      max-width: 960px;
+
+
+      }
+
+      .home_content_2 h1{
+
+      max-width: 100vw;
+      margin-left: -15px;
+      margin-top: 20px;
+      }
+
+      .home_benefits {
+        display: block;
+      }
+
+      .home_benefits_1, .home_benefits_2, .home_benefits_3, .home_benefits_4 {
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .home_benef_img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .home_content_3{
+        max-width: 960px;
+      }
+
+      .home_content_3 h1{
+        max-width: 950px;
+        margin-left: -10px;
+      }
+
+      .home_content_4 {
+        max-width: 98vw;
+      }
+
+      .home_content_4 h1, .home_content_4_txt{
+        margin-left: -20px;
+      }
+
+      .home_content_4_faq{
+        max-width: 950px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -341,9 +447,28 @@ footer a{
         background-color: #4CAF50;
         padding-top: 20px;
         padding-bottom: 20px;
-        width: 950px;
+        max-width: 98vw;
         margin-left: auto;
         margin-right: auto;
+        }
+
+        .columna1{
+          height: 150px;
+          width: 20%;
+          margin-right: 50px;
+        }
+
+        .columna1 label{
+          margin-left: 0px;
+        }
+
+
+        .columna2 label{
+          margin-left: -50px;
+        }
+
+        .columna3 ul {
+          margin-left: -20px;
         }
 
 
@@ -353,12 +478,17 @@ footer a{
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+
   .container{
     background-color: lightgrey;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 1px black;
-    width: 750px;
+    max-width: 750px;
+  }
+
+  .espacio_vacio{
+    max-width: 740px;
   }
 
   .main-header{
@@ -368,9 +498,10 @@ footer a{
 
 
   .main-nav ul{
+
+
     margin-left: 0px;
     margin-top: 30px;
-
     position: relative;
     display: flex;
   }
@@ -396,10 +527,30 @@ footer a{
   }
 
   .home_main_image img{
-    width: 750px;
+    max-width: 98%;
     margin-left: auto;
     margin-right: auto;
   }
+
+  .home_content_3{
+    max-width: 740px;
+  }
+
+  iframe {
+    max-width: 700px;
+  }
+
+  .home_content_4 h1, .home_content_4_txt{
+    margin-left: 0px;
+    max-width: 740px;
+  }
+
+  .home_content_4_faq {
+    max-width: 720px;
+  }
+
+
+
 
   .container_footer{
     background-color: #4CAF50;
@@ -421,14 +572,22 @@ footer a{
       height: 150px;
       width: 250;
       margin-right: 0px;
-      margin-left: -30px;
+      margin-left: -10px;
+    }
+
+    .columna2 label {
+      margin-left: 10px;
     }
 
     .columna3{
       height: 150px;
       width:230px;
       margin-left: 0px;
-      margin-right: -10px
+      margin-right: -10px;
+    }
+
+    .columna3 label {
+      margin-left: -30px;
     }
 
     .columna1 li{
@@ -452,21 +611,15 @@ footer a{
       margin-left: 2px;
 
     }
-    .columna1 a{
+    .columna1 a, .columna2 a, .columna3 a{
       font-size: 0.8em;
 
     }
-    .columna2 a{
-      font-size: 0.8em;
-    }
 
-    .columna3 a{
-      font-size: 0.8em;
-    }
 
     footer label{
-      margin-left: 20px;
-      font-size: 1em;
+      margin-left: 8px;
+      font-size: 1.2em;
     }
 
     footer a{
@@ -477,11 +630,143 @@ footer a{
 
     }
 
+    .footer_top ul{
+      font-size: 23px;
+    }
+
     .footer_bottom{
-      margin-top: 20px;
+      margin-top: 30px;
       margin-left: -20px;
       font-size: 0.8em;
     }
+}
+
+/*mobile*/
+    @media only screen and (max-width : 480px) {
+
+.container{
+  max-width: 98vw;
+}
+
+
+.imagen{
+
+  position: absolute;
+  top: 50px;
+  width: 200px;
+  margin-left: 20%;
+}
+
+
+.main-nav ul{
+
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 2px;
+  top: 150px;
+}
+
+.main-nav li{
+  width: 98vw;
+  display: block;
+  background-color: #4CAF50;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main-nav a{
+  max-width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.main-nav a:hover{
+  background-color: inherit;
+}
+
+
+.home_main_image img{
+margin-top: 300px;
+max-width: 95%;
+height: 220px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.login{
+  width: 100%;
+}
+
+.login{
+  font-size: 22px;
+}
+
+.home_content_3{
+  max-width: 98%;
+}
+
+iframe {
+  max-width: 90%;
+}
+
+.home_content_4 h1, .home_content_4_txt{
+  margin-left: -20px;
+  max-width: 98%;
+}
+
+.home_content_4_faq {
+  max-width: 98%;
+}
+
+
+
+.footer_top{
+  display: block;
+}
+
+
+.columna1{
+  height: 200px;
+  width: 100%  ;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.columna2{
+  height: 250px;
+  width: 100%  ;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.columna3{
+  height: 150px;
+  width: 100%  ;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.columna1 label, .columna2 label, .columna3 label{
+  font-size: 1.5em;
+  width: 100%;
+  margin-left: 5px;
+}
+
+.columna1 ul li, .columna2 ul li, .columna3 ul li{
+margin-bottom: 15px;
+margin-top: 10px;
+text-align: center;
+margin-left: -50px;
+
+}
 
 
 
