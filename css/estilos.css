@@ -224,6 +224,10 @@ button:hover{
   background-color: rgb(130, 123, 123);
 }
 
+.button_video_link{
+  text-decoration: none;
+  color: white;
+}
 .home_content_4{
   padding-top: 20px;
   padding-bottom: 50px;
