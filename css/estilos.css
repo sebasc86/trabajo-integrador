@@ -16,7 +16,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
   border-bottom: 1px black;
-  max-width: 98%;
+  max-width: 1200px;
   border-radius: 5px;
 }
 
@@ -55,17 +55,11 @@ body {
 	display: none;
 }
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< Updated upstream
-=======
->>>>>>> master
->>>>>>> Stashed changes
 .main-nav ul{
 	max-width: 1000px;
 	list-style: none;
-	margin-left: 190px;
+	margin-left: 200px;
 	display: flex;
 	margin-bottom: 70px;
   flex-direction: row wrap;
@@ -117,7 +111,6 @@ h1{
   text-align: left;
   margin-bottom: 20px;
   padding-left: 25px;
-  color: #333333;
 
 }
 
@@ -133,7 +126,7 @@ h1{
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 98%;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -147,7 +140,7 @@ h1{
 .home_content_2{
   margin-bottom: 50px;
   margin-top: 20px;
-  max-width: 98%;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -206,7 +199,7 @@ section{
   padding-top: 20px;
   padding-bottom: 50px;
   background-color: lightgrey;
-  max-width: 95%;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -234,7 +227,7 @@ button:hover{
 .home_content_4{
   padding-top: 20px;
   padding-bottom: 50px;
-  max-width: 95%;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -264,37 +257,14 @@ button:hover{
   text-align: justify;
 }
 
-.registro{
-  margin-bottom: 50px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.faq{
+  text-align: left;
 }
 
-.registro_form{
-  padding-top: 50px;
-  display: flex;
-  flex-flow: column;
-  max-width: 320px;
-  align-items: flex-start;
-  position: 50%;
-}
-
-.registro_form_1{
-
-
-}
-
-.registro_button{
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  font-size: 1.2em;
-  width: 150px;
-  height: 50px;
-  line-height: 0px;
-  border-radius: 5px;
-  margin-top: 35px;
+.home_content_4_faq_1_icon{
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 2px;
 }
 
 .espacio_vacio{
@@ -309,7 +279,7 @@ button:hover{
   background-color: #4CAF50;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 98%;
+  width: 1180px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -325,20 +295,13 @@ button:hover{
 .columna1{
   height: 150px;
   width: 20%;
-  margin-right: 160px;
+  margin-right: 100px;
   margin-left: -30px;
-<<<<<<< Updated upstream
-=======
 
-}
->>>>>>> Stashed changes
-
-.columna1 label{
-  margin-left: -50px;
 }
 
 .columna1 label{
-  margin-left: -50px;
+  margin-left: -35px;
 }
 
 .columna2{
@@ -348,7 +311,7 @@ button:hover{
 }
 
 .columna2 label{
-  margin-left: -140px;
+  margin-left: -110px;
 
 }
 .columna3{
@@ -357,7 +320,7 @@ button:hover{
 }
 
 .columna3 label{
-  margin-left: -60px;
+  margin-left: -35px;
 }
 
 
@@ -611,30 +574,34 @@ footer a{
     .columna1{
       height: 150px;
       width: 230px  ;
-      margin-left: -30px;
+      margin-left: 0px;
       margin-right: 0;
+    }
+
+    .columna1 label {
+      margin-left: -45px;
     }
 
     .columna2{
       height: 150px;
       width: 250;
       margin-right: 0px;
-      margin-left: -10px;
+      margin-left: 0px;
     }
 
     .columna2 label {
-      margin-left: 10px;
+      margin-left: -50px;
     }
 
     .columna3{
       height: 150px;
       width:230px;
       margin-left: 0px;
-      margin-right: -10px;
+      margin-right: -40px;
     }
 
     .columna3 label {
-      margin-left: -30px;
+      margin-left: -45px;
     }
 
     .columna1 li{
@@ -679,6 +646,7 @@ footer a{
 
     .footer_top ul{
       font-size: 23px;
+      margin-left: -30px;
     }
 
     .footer_bottom{
@@ -804,17 +772,22 @@ iframe {
 .columna1 label, .columna2 label, .columna3 label{
   font-size: 1.5em;
   width: 100%;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .columna1 ul li, .columna2 ul li, .columna3 ul li{
 margin-bottom: 15px;
 margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
 text-align: center;
-margin-left: -50px;
 
 }
 
 
+
+.footer_bottom{
+  margin-top: 30px;
+  margin-left: 20px;
 
 }
