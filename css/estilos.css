@@ -18,6 +18,7 @@ body {
   border-bottom: 1px black;
   max-width: 1200px;
   border-radius: 5px;
+  height: auto;
 }
 
 .container ul{
@@ -59,7 +60,7 @@ body {
 .main-nav ul{
 	max-width: 1000px;
 	list-style: none;
-	margin-left: 200px;
+	margin-left: 230px;
 	display: flex;
 	margin-bottom: 70px;
   flex-direction: row wrap;
@@ -76,9 +77,10 @@ body {
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
-	margin-left: 70px;
+	margin-left: 50px;
 	margin-top: 50px;
   color: black;
+  font-size: 18px;
 }
 
 .main-nav a:hover {
@@ -94,6 +96,7 @@ body {
   -webkit-flex-flow: row wrap;
 	display: flex;
   justify-content: space-around;
+  margin-top: -10px;
 }
 
 .login li{
@@ -106,6 +109,14 @@ body {
 	display: block;
   color: black;
 }
+
+
+/*>>>>>>>>>>>><<<<<<<<<<<<<HEADER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+
+/*>>>>>>>>>>>>>>> HOME *>>>>>>>>>>>>>>>>>>> */
 
 h1{
   text-align: left;
@@ -279,6 +290,307 @@ button:hover{
 		background-color: white;
 }
 
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>REGISTRO<<<<<<<<<<<<<<<<<<*/
+
+
+h2{
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-top: 25px;
+  color: #333333;
+}
+
+.registro_bienvenida{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 500px;
+  padding: 40px;
+  margin: auto;
+  box-shadow: 0px 0px 3px grey;
+}
+
+.contenedor_formulario {
+  width: 100%;
+  color: black;
+  padding: 50px;
+}
+
+.contenedor_formulario .formulario {
+  width: 100%;
+  margin: auto;
+}
+
+.contenedor_formulario .formulario .input_group {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.contenedor_formulario .formulario .input_group input[type="text"],
+.contenedor_formulario .formulario .input_group input[type="email"],
+.contenedor_formulario .formulario .input_group input[type="password"] {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: dimgrey;
+  width: 100%;
+  outline: none;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid dimgrey;
+}
+
+.contenedor_formulario .formulario .input_group label {
+  color: dimgrey;
+}
+
+.contenedor_formulario .formulario .input_group label.label {
+  margin-left: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox label,
+.contenedor_formulario .formulario .input_group.radio label {
+  display: inline-block;
+  cursor: pointer;
+  color: dimgrey;
+  position: relative;
+  padding: 5px 15px 5px 51px;
+  font-size: 1em;
+  border-radius: 3px;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox label:hover, .contenedor_formulario .formulario .input_group.radio label:hover {
+  background: lightgrey;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox label:before, .contenedor_formulario .formulario .input_group.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 15px;
+  border-radius: 50%;
+  background: none;
+  border: 2px solid dimgrey;
+}
+
+.contenedor_formulario .formulario .input_group.error label:before {
+  border: 2px solid dimgrey;
+}
+
+.contenedor_formulario .formulario .input_group.radio input[type="radio"] {
+  display: none;
+}
+
+.contenedor_formulario .formulario .input_group.radio input[type="radio"]:checked + label:before {
+  display: none;
+}
+
+.contenedor_formulario .formulario .input_group.radio input[type="radio"]:checked + label {
+  padding: 5px 15px;
+  background: #4CAF50;
+  border-radius: 2px;
+  color: #f2f2f2;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox label:before {
+  border-radius: 3px;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox input[type="checkbox"]:checked + label:before {
+  display: none;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox input[type="checkbox"]:checked + label {
+  background: #4CAF50;
+  color: #f2f2f2;
+  padding: 5px 15px;
+}
+
+.contenedor_formulario .formulario input[type="submit"] {
+  background: #4CAF50;
+  border-radius: 5px;
+  border: 2px solid #f2f2f2;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto";
+  font-size: 1.2em;
+  width: 150px;
+  height: 50px;
+  line-height: 0px;
+  text-align: center;
+}
+
+.contenedor_formulario .formulario input[type="submit"]:hover {
+  background: dimgrey;
+  color: #fff;
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<INGRESAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+h2{
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-top: 25px;
+  color: #333333;
+}
+
+.registro_bienvenida{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 500px;
+  padding: 40px 40px 20px 40px;
+  margin: auto;
+  box-shadow: 0px 0px 3px grey;
+}
+
+.contenedor_ingresar {
+  width: 100%;
+  color: black;
+  padding: 0 50px 50px 50px;
+}
+
+.contenedor_ingresar .ingresar {
+  width: 100%;
+  margin: auto;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar input[type="text"],
+.contenedor_ingresar .ingresar .input_group_ingresar input[type="email"],
+.contenedor_ingresar .ingresar .input_group_ingresar input[type="password"] {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: dimgrey;
+  width: 100%;
+  outline: none;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid dimgrey;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar label {
+  color: dimgrey;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar label.label {
+  margin-left: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  color: dimgrey;
+  position: relative;
+  padding: 5px 15px 5px 51px;
+  font-size: 1em;
+  border-radius: 3px;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.checkbox label:hover {
+  background: lightgrey;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 15px;
+  border-radius: 50%;
+  background: none;
+  border: 2px solid dimgrey;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.error label:before {
+  border: 2px solid dimgrey;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.checkbox label:before {
+  border-radius: 3px;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.checkbox input[type="checkbox"]:checked + label:before {
+  display: none;
+}
+
+.contenedor_ingresar .ingresar .input_group_ingresar.checkbox input[type="checkbox"]:checked + label {
+  background: #4CAF50;
+  color: #f2f2f2;
+  padding: 5px 15px;
+}
+
+.contenedor_ingresar .ingresar input[type="submit"] {
+  background: #4CAF50;
+  border-radius: 5px;
+  border: 2px solid #f2f2f2;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto";
+  font-size: 1.2em;
+  width: 150px;
+  height: 50px;
+  line-height: 0px;
+  text-align: center;
+}
+
+.contenedor_ingresar .ingresar input[type="submit"]:hover {
+  background: dimgrey;
+  color: #fff;
+}
+
+.recuperar {
+  display: inline-block;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: dimgrey;
+  padding-top: 15px;
+
+}
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>< FOOTER */
+
 .container_footer{
   background-color: #4CAF50;
   padding-top: 20px;
@@ -396,6 +708,7 @@ footer a{
 
       .main-nav a{
       	margin-left: 10px;
+        padding: 5px 2px;
       }
 
       .home_main_image img{
@@ -514,7 +827,7 @@ footer a{
   .main-nav ul{
 
 
-    margin-left: 0px;
+    margin-left: 20px;
     margin-top: 30px;
     position: relative;
     display: flex;
@@ -528,7 +841,8 @@ footer a{
 
   .main-nav a{
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 1em;
+    padding: 5px 15px;
   }
 
   .imagen{
@@ -594,7 +908,7 @@ footer a{
     }
 
     .columna2 label {
-      margin-left: -50px;
+      margin-left: -30px;
     }
 
     .columna3{
@@ -707,6 +1021,10 @@ footer a{
   background-color: inherit;
 }
 
+.login a::before{
+  display: none;
+}
+
 
 .home_main_image img{
 margin-top: 300px;
@@ -729,6 +1047,9 @@ margin-right: auto;
   max-width: 98%;
 }
 
+
+/*>>>>>>>>>>>>>> PAGE HOME <<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 iframe {
   max-width: 90%;
 }
@@ -750,18 +1071,20 @@ iframe {
 
 
 .columna1{
-  height: 200px;
+  height: auto;
   width: 100%  ;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 
 }
 
 .columna2{
-  height: 250px;
+  height: auto;
   width: 100%  ;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 
 }
 
@@ -774,9 +1097,10 @@ iframe {
 }
 
 .columna1 label, .columna2 label, .columna3 label{
-  font-size: 1.5em;
+  font-size: 1.1em;
   width: 100%;
   margin-left: 20px;
+  border-bottom: 1px solid;
 }
 
 .columna1 ul li, .columna2 ul li, .columna3 ul li{
@@ -786,8 +1110,38 @@ margin-left: auto;
 margin-right: auto;
 text-align: center;
 
+
 }
 
+/*<<<<<<<<<<<<<<<<<<<<<< PAGE INGRESAR>>>>>>>>>>>>>>>>>*/
+.registro_bienvenida{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+}
+
+.contenedor_formulario .formulario .input_group.checkbox label,
+.contenedor_formulario .formulario .input_group.radio label {
+  display: block;
+  cursor: pointer;
+  color: dimgrey;
+  position: relative;
+  padding: 15px 15px 5px 51px;
+  font-size: 1em;
+  border-radius: 3px;
+}
+
+.contenedor_formulario .formulario .input_group {
+  position: relative;
+  margin-bottom: 0px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>> */
 
 
 .footer_bottom{

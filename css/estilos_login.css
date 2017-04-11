@@ -104,6 +104,11 @@ body {
   color: black;
 }
 
+
+/*<<<<<<<<<<<<<<<<<<<<<<<HEADER>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/*<<<<<<<<<<<<<<<<<<<<INGRESAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 h2{
   text-align: left;
   margin-bottom: 20px;
@@ -245,6 +250,9 @@ h2{
   padding-top: 15px;
 
 }
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Footer>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 .container_footer{
   background-color: #4CAF50;

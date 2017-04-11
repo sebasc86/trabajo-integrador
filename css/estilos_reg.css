@@ -104,6 +104,9 @@ body {
   color: black;
 }
 
+
+/*>>>>>>>>>>>>>>>>>>>>>>>> HEADER*/
+
 h2{
   text-align: left;
   margin-bottom: 20px;
@@ -252,6 +255,9 @@ h2{
   background: dimgrey;
   color: #fff;
 }
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<FOOTER*/
 
 .container_footer{
   background-color: #4CAF50;
