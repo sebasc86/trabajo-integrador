@@ -131,8 +131,6 @@ h1{
 
 }
 
-
-
 .home_main_image img{
   background-size: cover;
   background-repeat: no-repeat;
@@ -140,6 +138,7 @@ h1{
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
 }
 
 .texto_overlay{
@@ -286,14 +285,6 @@ button:hover{
   position: absolute;
   margin-left: -20px;
   margin-top: 2px;
-}
-
-.espacio_vacio{
-		max-width: auto;
-		height: 20px;
-		margin-left: auto;
-		margin-right: auto;
-		background-color: white;
 }
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>REGISTRO<<<<<<<<<<<<<<<<<<*/
@@ -680,10 +671,6 @@ footer a{
         max-width: 950px;
       }
 
-      .espacio_vacio{
-        max-width: 98vw;
-      }
-
       .main-nav ul{
       	margin-left: 250px;
       	margin-bottom: 70px;
@@ -775,19 +762,11 @@ footer a{
     max-width: 750px;
   }
 
-  .espacio_vacio{
-    max-width: 740px;
-  }
-
   .main-header{
     height: 120px;
   }
 
-
-
   .main-nav ul{
-
-
     margin-left: 20px;
     margin-top: 30px;
     position: relative;
