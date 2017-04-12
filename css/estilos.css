@@ -176,8 +176,9 @@ h1{
 }
 
 .home_benefits_2{
-  margin-top: -10px;
-  width: 50%
+  margin-top: -7px;
+  width: 50%;
+  margin-bottom: 10px;
 }
 
 .home_benefits_3{
@@ -185,7 +186,7 @@ h1{
 }
 
 .home_benefits_4{
-  margin-top: 5px;
+  margin-top: 7px;
   width: 50%
 }
 
@@ -214,6 +215,11 @@ section{
   margin-left: auto;
   margin-right: auto;
 }
+
+iframe {
+  max-width: 1180px;
+}
+
 
 .home_content_3_txt{
   margin-top: 25px;
@@ -737,6 +743,10 @@ footer a{
         max-width: 960px;
       }
 
+      iframe {
+        max-width: 98%;
+      }
+
       .home_content_3 h1{
         max-width: 950px;
         margin-left: -10px;
@@ -851,7 +861,7 @@ footer a{
   }
 
   iframe {
-    max-width: 700px;
+    max-width: 95%;
   }
 
   .home_content_4 h1, .home_content_4_txt{
