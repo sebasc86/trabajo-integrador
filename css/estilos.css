@@ -302,22 +302,16 @@ h2{
 }
 
 .registro_bienvenida{
-  max-width: 1200px;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
 }
 
-.wrap {
-  width: 90%;
-  max-width: 500px;
-  padding: 40px;
-  margin: auto;
-  box-shadow: 0px 0px 3px grey;
-}
+
 
 .contenedor_formulario {
-  width: 100%;
+  max-width: 1180px;
   color: black;
   padding: 50px;
 }
@@ -453,11 +447,7 @@ h2{
   color: #333333;
 }
 
-.registro_bienvenida{
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 .wrap {
   width: 90%;
@@ -1040,7 +1030,7 @@ margin-right: auto;
 }
 
 .login{
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .home_content_3{
@@ -1115,7 +1105,6 @@ text-align: center;
 
 /*<<<<<<<<<<<<<<<<<<<<<< PAGE INGRESAR>>>>>>>>>>>>>>>>>*/
 .registro_bienvenida{
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 300px;
