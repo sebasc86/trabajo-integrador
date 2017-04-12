@@ -314,6 +314,8 @@ h2{
   max-width: 1180px;
   color: black;
   padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contenedor_formulario .formulario {
@@ -439,13 +441,7 @@ h2{
 
 
 /*<<<<<<<<<<<<<<<<<<<<INGRESAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-h2{
-  text-align: left;
-  margin-bottom: 20px;
-  padding-left: 25px;
-  padding-top: 25px;
-  color: #333333;
-}
+
 
 
 
@@ -1015,6 +1011,7 @@ footer a{
   display: none;
 }
 
+/*>>>>>>>>>>>>>> PAGE HOME <<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 .home_main_image img{
 margin-top: 300px;
@@ -1038,7 +1035,7 @@ margin-right: auto;
 }
 
 
-/*>>>>>>>>>>>>>> PAGE HOME <<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 
 iframe {
   max-width: 90%;
@@ -1104,6 +1101,10 @@ text-align: center;
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<< PAGE INGRESAR>>>>>>>>>>>>>>>>>*/
+h2{
+  text-align: center;
+}
+
 .registro_bienvenida{
   margin-left: auto;
   margin-right: auto;
