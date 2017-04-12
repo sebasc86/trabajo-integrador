@@ -1,0 +1,16 @@
+SPRINT 1
+Federico Heinen
+  diseño de cada mockup
+  diseño y codeo del footer
+  registro: html (reuso de header y footer) y formulario
+  login: html (reuso de header y footer) y formulario
+  faq.html
+
+Sebastian Coscia
+  diseño y codeo header
+  retoque codigo contenido home.html
+  arreglo footer
+  media queries
+
+SPRINT 2
+Paula Vazquez Blanco (nueva integrante)

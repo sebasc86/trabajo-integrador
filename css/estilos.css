@@ -131,20 +131,12 @@ h1{
 
 }
 
-<<<<<<< Updated upstream
-=======
-.home_main_image{
-max-width: 1200px;
-margin-left: auto;
-margin-right: auto;
-}
 
->>>>>>> Stashed changes
 .home_main_image img{
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
-  max-width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -882,7 +874,7 @@ footer a{
 /*>>>>>>>>>>>>>> PAGE HOME <<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 .home_main_image img{
-margin-top: 300px;
+margin-top: 320px;
 max-width: 95%;
 height: 220px;
 margin-left: auto;
