@@ -9,13 +9,13 @@ body {
 	font-family: 'Roboto', sans-serif;
   margin-right: auto;
   overflow: auto;
+  color: #666;
 }
 
 .container{
-  background-color: lightgrey;
 	margin-left: auto;
 	margin-right: auto;
-  border-bottom: 1px black;
+  border-bottom: 1px #666;
   max-width: 1200px;
   border-radius: 5px;
   height: auto;
@@ -44,12 +44,11 @@ body {
 }
 
 
-.login a::before{
-	position: relative;
-	content: "|";
-	text-align: center;
-	right: 13px;
-	color: black;
+.login a{
+	border-left: 1px solid #666;
+}
+ul.login li:first-child a{
+  border-left: none;
 }
 
 #none::before {
@@ -72,6 +71,7 @@ body {
 }
 
 .main-nav a{
+  font-weight: bold;
   position: relative;
   justify-content: space-around;
   padding: 5px 10px;
@@ -79,13 +79,17 @@ body {
   text-decoration: none;
 	margin-left: 50px;
 	margin-top: 50px;
-  color: black;
+  color: #666;
   font-size: 18px;
 }
 
 .main-nav a:hover {
-  background-color: dimgrey;
-  color: black;
+  color: #63ADF2;
+}
+a:hover,
+a:active,
+a:focus{
+  background-color: transparent;
 }
 
 .login {
@@ -107,7 +111,7 @@ body {
 	margin-left: 0px;
 	text-decoration: none;
 	display: block;
-  color: black;
+  color: #666;
 }
 
 
@@ -131,15 +135,24 @@ h1{
 
 }
 
-
-.home_main_image img{
-  background-size: cover;
+.home_main_image{
+  background: url('../img/banner.jpg');
   background-repeat: no-repeat;
-  background-color: transparent;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+}
+.home_main_image .bg_text{
+  background-color: #888;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 20px;
+}
+.home_main_image h2{
+  color: #fff;
+  font-size: 60px;
+  width: 80%;
+  margin: auto;
 }
 
 .texto_overlay{
@@ -149,26 +162,34 @@ h1{
 }
 
 .home_content_2{
-  margin-bottom: 50px;
-  margin-top: 20px;
+  margin-top: 60px;
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.home_content_2 h1{
+.home_content_2 h2{
   margin-left: -10px;
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
-.home_content_2_txt{
+.home_content_2 p{
   text-align: justify;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 50px;
+  line-height: 23px;
+  font-size: 20px;
+  max-width: 90%;
+  margin: 20px auto;
+}
+.home_content_2 p:last-of-type{
+  margin-bottom: 80px;
 }
 
 .home_benefits {
   display: flex;
+  margin: auto;
 }
 
 .home_benefits_1{
@@ -188,6 +209,10 @@ h1{
 .home_benefits_4{
   margin-top: 7px;
   width: 50%
+}
+.home_benefits_txt{
+  max-width: 60%;
+  margin: 30px auto 80px;
 }
 
 .home_benef_img{
@@ -210,10 +235,13 @@ section{
 .home_content_3{
   padding-top: 20px;
   padding-bottom: 50px;
-  background-color: lightgrey;
-  max-width: 1120px;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
+}
+.home_content_3 h2{
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 iframe {
@@ -222,12 +250,13 @@ iframe {
 
 
 .home_content_3_txt{
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 22px;
 }
 
 .home_button{
-  background-color: #4CAF50;
+  background-color: #FFE347;
   color: white;
   border: none;
   font-size: 1.2em;
@@ -243,12 +272,13 @@ button:hover{
 
 .button_video_link{
   text-decoration: none;
-  color: white;
+  color: #666;
 }
 .home_content_4{
+  margin-top: 40px;
   padding-top: 20px;
   padding-bottom: 50px;
-  max-width: 1120px;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -259,11 +289,12 @@ button:hover{
 
 
 .home_content_4_txt{
-
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   padding-left: 25px;
   text-align: left;
-  margin-left: -25px;
+  margin-top: 15px;
+  margin-left: 10px;
+  font-size: 22px;
 }
 
 .home_content_4_faq_1_txt{
@@ -281,7 +312,17 @@ button:hover{
 .faq{
   text-align: left;
 }
-
+.home_content_4_faq{
+  max-width: 80%;
+  margin: auto;
+  line-height: 22px;
+}
+.home_content_4_faq h3{
+  margin-bottom: 20px;
+}
+.home_content_4_faq section{
+  margin-bottom: 50px;
+}
 .home_content_4_faq_1_icon{
   position: absolute;
   margin-left: -20px;
@@ -296,24 +337,35 @@ h2{
   margin-bottom: 20px;
   padding-left: 25px;
   padding-top: 25px;
-  color: #333333;
+  font-size: 40px;
+  color: #666;
 }
 
 .registro_bienvenida{
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 
 
+.error {
+  display: block;
+  border: 2px solid red;
+  width: 250px;
+  margin: auto;
+  margin-top: 5px;
+}
+
 .contenedor_formulario {
   max-width: 1180px;
-  color: black;
+  color: #666;
   padding: 50px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 100px;
 }
 
 .contenedor_formulario .formulario {
@@ -331,17 +383,17 @@ h2{
 .contenedor_formulario .formulario .input_group input[type="password"] {
   font-family: "Roboto";
   font-size: 16px;
-  color: dimgrey;
+  color: dimgray;
   width: 100%;
   outline: none;
   padding: 15px;
   background: none;
   border: none;
-  border-bottom: 2px solid dimgrey;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .contenedor_formulario .formulario .input_group label {
-  color: dimgrey;
+  color: dimgray;
 }
 
 .contenedor_formulario .formulario .input_group label.label {
@@ -357,7 +409,7 @@ h2{
 .contenedor_formulario .formulario .input_group.radio label {
   display: inline-block;
   cursor: pointer;
-  color: dimgrey;
+  color: dimgray;
   position: relative;
   padding: 5px 15px 5px 51px;
   font-size: 1em;
@@ -365,7 +417,7 @@ h2{
 }
 
 .contenedor_formulario .formulario .input_group.checkbox label:hover, .contenedor_formulario .formulario .input_group.radio label:hover {
-  background: lightgrey;
+  background: #e0e0e0;
 }
 
 .contenedor_formulario .formulario .input_group.checkbox label:before, .contenedor_formulario .formulario .input_group.radio label:before {
@@ -377,11 +429,11 @@ h2{
   left: 15px;
   border-radius: 50%;
   background: none;
-  border: 2px solid dimgrey;
+  border: 2px solid #e0e0e0;
 }
 
 .contenedor_formulario .formulario .input_group.error label:before {
-  border: 2px solid dimgrey;
+  border: 2px solid #e0e0e0;
 }
 
 .contenedor_formulario .formulario .input_group.radio input[type="radio"] {
@@ -394,7 +446,7 @@ h2{
 
 .contenedor_formulario .formulario .input_group.radio input[type="radio"]:checked + label {
   padding: 5px 15px;
-  background: #4CAF50;
+  background: #304D6D;
   border-radius: 2px;
   color: #f2f2f2;
 }
@@ -412,16 +464,16 @@ h2{
 }
 
 .contenedor_formulario .formulario .input_group.checkbox input[type="checkbox"]:checked + label {
-  background: #4CAF50;
+  background: #304D6D;
   color: #f2f2f2;
   padding: 5px 15px;
 }
 
 .contenedor_formulario .formulario input[type="submit"] {
-  background: #4CAF50;
+  background: #304D6D;
   border-radius: 5px;
   border: 2px solid #f2f2f2;
-  color: black;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: "Roboto";
@@ -433,7 +485,7 @@ h2{
 }
 
 .contenedor_formulario .formulario input[type="submit"]:hover {
-  background: dimgrey;
+  background: #e0e0e0;
   color: #fff;
 }
 
@@ -453,8 +505,8 @@ h2{
 
 .contenedor_ingresar {
   width: 100%;
-  color: black;
-  padding: 0 50px 50px 50px;
+  color: #666;
+  padding: 0 50px 100px 50px;
 }
 
 .contenedor_ingresar .ingresar {
@@ -472,13 +524,13 @@ h2{
 .contenedor_ingresar .ingresar .input_group_ingresar input[type="password"] {
   font-family: "Roboto";
   font-size: 16px;
-  color: dimgrey;
+  color: #666;
   width: 100%;
   outline: none;
   padding: 15px;
   background: none;
   border: none;
-  border-bottom: 2px solid dimgrey;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .contenedor_ingresar .ingresar .input_group_ingresar label {
@@ -517,11 +569,11 @@ h2{
   left: 15px;
   border-radius: 50%;
   background: none;
-  border: 2px solid dimgrey;
+  border: 2px solid #e0e0e0;
 }
 
 .contenedor_ingresar .ingresar .input_group_ingresar.error label:before {
-  border: 2px solid dimgrey;
+  border: 2px solid #e0e0e0;
 }
 
 .contenedor_ingresar .ingresar .input_group_ingresar.checkbox label:before {
@@ -537,13 +589,13 @@ h2{
 }
 
 .contenedor_ingresar .ingresar .input_group_ingresar.checkbox input[type="checkbox"]:checked + label {
-  background: #4CAF50;
+  background: #304D6D;
   color: #f2f2f2;
   padding: 5px 15px;
 }
 
 .contenedor_ingresar .ingresar input[type="submit"] {
-  background: #4CAF50;
+  background: #304D6D;
   border-radius: 5px;
   border: 2px solid #f2f2f2;
   color: #fff;
@@ -558,7 +610,7 @@ h2{
 }
 
 .contenedor_ingresar .ingresar input[type="submit"]:hover {
-  background: dimgrey;
+  background: #e0e0e0;
   color: #fff;
 }
 
@@ -566,7 +618,7 @@ h2{
   display: inline-block;
   font-size: 0.8em;
   text-decoration: none;
-  color: dimgrey;
+  color: #e0e0e0;
   padding-top: 15px;
 
 }
@@ -576,10 +628,9 @@ h2{
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>< FOOTER */
 
 .container_footer{
-  background-color: #4CAF50;
+  background-color: #6E675F;
   padding-top: 20px;
   padding-bottom: 20px;
-  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -588,7 +639,9 @@ h2{
 .footer_top{
   display: flex;
   /*flex-direction: row wrap;*/
+  max-width: 90%;
   justify-content: space-around;
+  margin-top: 20px;
   /*-webkit-flex-flow: row wrap;*/
   margin-left: auto;
   margin-right: auto;
@@ -640,10 +693,14 @@ h2{
 }
 
 .label_footer_col{
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
   line-height: 25px;
-
 }
-
+.footer_top ul{
+  margin-top: 10px;
+}
 
 
 
@@ -665,10 +722,9 @@ footer a{
     @media only screen and (max-width : 992px) {
 
       .container{
-        background-color: lightgrey;
       	margin-left: auto;
       	margin-right: auto;
-        border-bottom: 1px black;
+        border-bottom: 1px #666;
         max-width: 950px;
       }
 
@@ -708,10 +764,6 @@ footer a{
       margin-top: 20px;
       }
 
-      .home_benefits {
-        display: block;
-      }
-
       .home_benefits_1, .home_benefits_2, .home_benefits_3, .home_benefits_4 {
         margin-bottom: 30px;
         margin-left: auto;
@@ -745,7 +797,6 @@ footer a{
       }
 
       .home_content_4_faq{
-        max-width: 950px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -756,17 +807,24 @@ footer a{
 
 
   .container{
-    background-color: lightgrey;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 1px black;
+    border-bottom: 1px #666;
     max-width: 750px;
   }
 
   .main-header{
     height: 120px;
+    position: relative;
   }
-
+  .container ul.login{
+    position: absolute;
+    top: 30%;
+    left: 0;
+  }
+  .home_main_image h2{
+    font-size: 43px;
+  }
   .main-nav ul{
     margin-left: 20px;
     margin-top: 30px;
@@ -814,9 +872,6 @@ footer a{
     max-width: 740px;
   }
 
-  .home_content_4_faq {
-    max-width: 720px;
-  }
 
 
 
@@ -826,20 +881,23 @@ footer a{
 .container{
   max-width: 98vw;
 }
-
+.home_benefits_1,
+.home_benefits_2,
+.home_benefits_3,
+.home_benefits_4{
+  width: 100%;
+}
 
 .imagen{
-
+  margin: 20px auto;
   position: absolute;
   top: 50px;
   width: 200px;
-  margin-left: 20%;
+  margin-left: 12%;
 }
 
 
 .main-nav ul{
-
-
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -850,7 +908,7 @@ footer a{
 .main-nav li{
   width: 98vw;
   display: block;
-  background-color: #4CAF50;
+  background-color: #304D6D;
   margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -862,7 +920,15 @@ footer a{
   margin-right: auto;
   text-align: center;
 }
-
+.home_main_image{
+  margin-top: 30px;
+}
+h2{
+  padding: 0;
+}
+.home_content_2 p{
+  font-size: 16px;
+}
 .main-nav a:hover{
   background-color: inherit;
 }
@@ -879,11 +945,10 @@ max-width: 95%;
 height: 220px;
 margin-left: auto;
 margin-right: auto;
-
 }
-
 .login{
   width: 100%;
+  margin: auto;
 }
 
 .login{
@@ -916,14 +981,46 @@ iframe {
 /*<<<<<<<<<<<<<<<<<<<<<< PAGE INGRESAR>>>>>>>>>>>>>>>>>*/
 h2{
   text-align: center;
+  font-size: 35px;
 }
-
+.home_main_image h2{
+  display: none;
+}
+.main-nav a{
+  color: #fff;
+}
+.home_benefits_txt{
+  margin-bottom: 60px;
+}
 .registro_bienvenida{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 300px;
+  margin-top: 340px;
 }
-
+.contenedor_ingresar{
+  padding-left: 0;
+  padding-right: 0;
+}
+.home_content_4 h1, .home_content_4_txt{
+  font-size: 18px;
+  margin-left: 0;
+  max-width: 100%;
+  width: 100%;
+  padding: 10px 10px 40px;
+}
+.home_content_4_faq_1_icon{
+  margin-left: 27%;
+}
+.faq{
+  text-align: center;
+}
+.home_content_4_faq_1_txt,
+.home_content_4_faq_2_txt,
+.home_content_4_faq_3_txt,
+.home_content_4_faq_4_txt{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .contenedor_formulario .formulario .input_group.checkbox label,
 .contenedor_formulario .formulario .input_group.radio label {
   display: block;
@@ -949,14 +1046,16 @@ h2{
 
 
 .container_footer{
-  background-color: #4CAF50;
   padding-top: 20px;
   padding-bottom: 20px;
-  max-width: 96%;
   margin-left: auto;
   margin-right: auto;
   display: block;
   height: auto;
+  }
+  .columna1,
+  .columna2{
+    margin-bottom: 30px;
   }
 
   .footer_top{
