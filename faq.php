@@ -12,29 +12,7 @@
   </head>
   <body>
 
-    <div class="container">
-
-        <header class="main-header">
-
-          <ul class="login">
-            <li><a href="registro.php">Registrarme</a></li>
-            <li><a href="ingresar.html">Ingresar</a></li>
-            <li><a href="#">Mi Cuenta</a></li>
-          </ul>
-
-          <a href="home.html"><img class="imagen" src="img/autopool_v2_w200.png" alt="autopool"></a>
-
-          <nav class="main-nav">
-            <ul>
-              <li><a href="home.html#anchor_content_2">Qué es autopool</a></li>
-              <li><a href="home.html#anchor_content_3">Como funciona</a></li>
-              <li><a href="#">Pasajeros</a></li>
-              <li><a href="#">Conductores</a></li>
-              <li><a href="#">Preguntas Frecuentes</a></li>
-            </ul>
-          </nav>
-        </header>
-      </div>
+    <?php include 'header.html' ;?>
 
     <div class="home_content_4" id="anchor_content_4">
       <h1>Algunas preguntas frecuentes</h1>
@@ -81,44 +59,7 @@
           </section>
       </div>
     </div>
+    <?php include 'footer.html' ?>
 
-    <div class="container_footer">
-      <footer>
-
-        <div class="footer_top">
-          <div class="columna1">
-            <label class="label_footer_col">SOBRE LA COMPAÑÍA</label>
-            <ul>
-              <li><a href="#">Sobre autopool</a></li>
-              <li><a href="#">Empleo</a></li>
-              <li><a href="#">Contacto</a></li>
-            </ul>
-          </div>
-          <div class="columna2">
-            <label class="label_footer_col">VIAJAR CON AUTOPOOL</label>
-            <ul>
-              <li><a href="#">Confianza y Seguridad</a></li>
-              <li><a href="#">Calificación de los Usuarios</a></li>
-              <li><a href="#">Preguntas Frecuentes</a></li>
-              <li><a href="#">Confianza y Seguridad</a></li>
-            </ul>
-          </div>
-          <div class="columna3">
-            <label class="label_footer_col">INFORMACIÓN LEGAL</label>
-            <ul>
-              <li><a href="#">Políticas de Uso</a></li>
-              <li><a href="#">Aviso de Privacidad</a></li>
-              <li><a href="#">Políticas de Cookies</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer_bottom">
-            <p>autopool - Todos los derechos reservados.</p>
-
-        </div>
-
-      </footer>
-    </div>
   </body>
 </html>
