@@ -153,15 +153,15 @@ include ("php\controller-registro-php.php");
                 <div class="input_group checkbox">
                   <input type="checkbox" name="accion[]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[]" id="acompañante" value="acompañante">
-                  <label for="acompañante">Acompañante</label>
+                  <input type="checkbox" name="accion[]" id="acompaniante" value="acompaniante">
+                  <label for="acompaniante">Acompañante</label>
                 </div>
               <?php elseif (validarAccion() == false): ?>
                 <div class="input_group checkbox">
                   <input type="checkbox" name="accion[]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[]" id="acompañante" value="acompañante">
-                  <label for="acompañante">Acompañante</label>
+                  <input type="checkbox" name="accion[]" id="acompaniante" value="acompaniante">
+                  <label for="acompaniante">Acompañante</label>
                   <span id='register_password_errorloc' class='error' ><?php echo $accionError ?></span>
                 </div>
 
@@ -172,9 +172,9 @@ include ("php\controller-registro-php.php");
                   <?php  if($value == "conductor") :?>
                       <input type="checkbox" name="accion[]" id="conductor" value="conductor" checked="">
                       <label for="conductor">Conductor</label>
-                  <?php elseif ($value == "acompañante") :?>
-                      <input type="checkbox" name="accion[]" id="acompañante" value="acompañante" checked="">
-                      <label for="acompañante">Acompañante</label>
+                  <?php elseif ($value == "acompaniante") :?>
+                      <input type="checkbox" name="accion[]" id="acompaniante" value="acompaniante" checked="">
+                      <label for="acompaniante">Acompañante</label>
                   <?php endif; ?>
                 <?php endforeach ;?>
                 </div>

@@ -164,8 +164,20 @@ function validarTerminos(){
    }
 };
 
-
-
+$miArray = [];
+if (validarPass() == true && validarNombre() == true && emailValidate() == true && validarPass() == true && validarSexo() == true && validarAccion() == true && validarTerminos()){
+  $miArray = [
+    'nombre' => $_POST['nombre'],
+    'apellido' => $_POST['apellido'],
+    'correo' => $_POST['correo'],
+    'password' => $_POST['password'],
+    'edad' => $_POST['edad'],
+    'sexo' => $_POST['sexo1'],
+    'accion' => $_POST['accion'],
+  ];
+  $json = json_encode($miArray);
+  file_put_contents('json/datos.txt', $json . PHP_EOL, FILE_APPEND | LOCK_EX);
+};
 
 
 ?>
