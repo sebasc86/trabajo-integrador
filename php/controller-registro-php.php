@@ -63,19 +63,6 @@ $nombre = trim($nombre);
 //email
 $emailError = '';
 function emailValidate() {
-  $recurso = fopen("json/datos.json", 'r');
-  $error = '';
-  while(($linea = fgets($recurso)) !== false ){
-      $linea = fgets($recurso);
-      $usuarios = json_decode($linea, true);
-      if(isset($_POST['correo'])) {
-        if(in_array($_POST['correo'], $usuarios)){
-        $GLOBALS['emailError'] = 'El email utilizado ya existe';
-        return false;
-        exit;
-        }
-      };
-  };
   if(isset($_POST["correo"])) {
     $email = trim($_POST['correo']);
     $input = filter_var($email, FILTER_VALIDATE_EMAIL);

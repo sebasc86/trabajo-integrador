@@ -2,3 +2,4 @@
 {"nombre":"Sebastian","apellido":"Coscia","correo":"sebascoscia@gmail.com","password":"123456Ab","edad":"30","sexo":["hombre"],"accion":["conductor"]}
 {"nombre":"Jorge","apellido":"Lopez","correo":"jlopez@hotmail.com","password":"123456Ab","edad":"45","sexo":["hombre"],"accion":["conductor","acompaniante"]}
 {"nombre":"Jorge","apellido":"Lopez","correo":"jlopez@hotmail.com","password":"123456Ab","edad":"45","sexo":["hombre"],"accion":["conductor","acompaniante"]}
+{"nombre":"Sebastian","apellido":"prueba","correo":"jorge@gmail.com","password":"$2y$10$xk4G7Z\/hQbraVwT194HGQe2lFJTqxJI\/JjrO72xxYNrg3BjHBTBri","edad":"20","sexo":["hombre"],"accion":["conductor"]}
