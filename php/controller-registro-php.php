@@ -176,7 +176,7 @@ if (validarPass() == true && validarNombre() == true && emailValidate() == true 
     'accion' => $_POST['accion'],
   ];
   $json = json_encode($miArray);
-  file_put_contents('json/datos.txt', $json . PHP_EOL, FILE_APPEND | LOCK_EX);
+  file_put_contents('json/datos.json', $json . PHP_EOL, FILE_APPEND | LOCK_EX);
 };
 
 
