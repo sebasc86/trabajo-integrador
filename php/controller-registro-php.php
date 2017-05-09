@@ -63,6 +63,19 @@ $nombre = trim($nombre);
 //email
 $emailError = '';
 function emailValidate() {
+  $recurso = fopen("json/datos.json", 'r');
+  $error = '';
+  while(($linea = fgets($recurso)) !== false ){
+      $linea = fgets($recurso);
+      $usuarios = json_decode($linea, true);
+      if(isset($_POST['correo'])) {
+        if(in_array($_POST['correo'], $usuarios)){
+        $GLOBALS['emailError'] = 'El email utilizado ya existe';
+        return false;
+        exit;
+        }
+      };
+  };
   if(isset($_POST["correo"])) {
     $email = trim($_POST['correo']);
     $input = filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -82,6 +95,7 @@ function emailValidate() {
 
 //validar pass
 $passError = '';
+$hashPass = '';
 function validarPass(){
   if(isset($_POST['password']) && isset($_POST["password2"])){
     $pass = $_POST["password"];
@@ -105,6 +119,7 @@ function validarPass(){
         $GLOBALS['passError'] = "La clave debe tener al menos un Número";
         return false;
     } else {
+      $GLOBALS['hashPass'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
       return true;
     };
   };
@@ -170,7 +185,7 @@ if (validarPass() == true && validarNombre() == true && emailValidate() == true 
     'nombre' => $_POST['nombre'],
     'apellido' => $_POST['apellido'],
     'correo' => $_POST['correo'],
-    'password' => $_POST['password'],
+    'password' => $hashPass,
     'edad' => $_POST['edad'],
     'sexo' => $_POST['sexo1'],
     'accion' => $_POST['accion'],
