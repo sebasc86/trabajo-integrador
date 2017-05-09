@@ -1,5 +1,5 @@
 <?php
-include ("php\controller-registro-php.php");
+include ("php/controller-registro-php.php");
 
 
 
