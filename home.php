@@ -65,7 +65,7 @@
         <p>Lo sentimos pero la versión de su navegador no permite reproducir este formato de video.</p>
       </video> -->
       <p class="home_content_3_txt">¿Qué estás esperando para viajar de forma más inteligente?</p>
-      <button class="home_button" type="submit" name="registrarte"><a class="button_video_link" href="registro.html">Registrate</a></button>
+      <button class="home_button" type="submit" name="registrarte"><a class="button_video_link" href="registro.php">Registrate</a></button>
     </div>
 
     <div class="home_content_4" id="anchor_content_4">
