@@ -1,5 +1,6 @@
 <?php
-include 'php/controller-login.php';
+include 'controller-login.php';
+include 'controller-img.php';
 
 
 function variable($tiponame) {
@@ -204,37 +205,27 @@ function validarTerminos(){
 
 $miArray = [];
 if (validarPass() == true && validarNombre() == true && emailValidate5() == true && validarPass() == true && validarSexo() == true && validarAccion() == true && validarTerminos()){
-  $miArray = [
-    'nombre' => $_POST['nombre'],
-    'apellido' => $_POST['apellido'],
-    'correo' => $_POST['correo'],
-    'password' => $hashPass,
-    'edad' => $_POST['edad'],
-    'sexo' => $_POST['sexo1'],
-    'accion' => $_POST['accion'],
-  ];
-  $json = json_encode($miArray);
-  header("Location: ../trabajo-integrador/HomeUser.php");
-  $_SESSION['nickname'] = $_POST['correo'];
-  $_SESSION['nombre'] = $_POST['nombre'];
-  file_put_contents('json/datos.json', $json . PHP_EOL, FILE_APPEND | LOCK_EX);
-  if (isset($_FILES['imgPerfil'])){
-    if ($_FILES['imgPerfil']['error'] == UPLOAD_ERR_OK) {
-      $filename = $_FILES['imgPerfil']['tmp_name'];
-      $ext = $_FILES["imgPerfil"]["name"];
-      $ext = pathinfo($ext, PATHINFO_EXTENSION); //jpg
-      $nombre = $_POST['correo'] . ".". $ext;
-      echo "$nombre";
-      echo "<br>";
-      $destination =  __DIR__ . "..\..\imagenperfil/" . $nombre;
-      echo "$destination";
-      echo "<br>";
-      move_uploaded_file($filename, $destination);
-    };
+    if(validarImagen() == true || $_FILES['imgPerfil']['name'] == 0){
+    $miArray = [
+      'nombre' => $_POST['nombre'],
+      'apellido' => $_POST['apellido'],
+      'correo' => $_POST['correo'],
+      'password' => $hashPass,
+      'edad' => $_POST['edad'],
+      'sexo' => $_POST['sexo1'],
+      'accion' => $_POST['accion'],
+    ];
+    $json = json_encode($miArray);
+    header("Location: ../trabajo-integrador/HomeUser.php");
+    $_SESSION['nickname'] = $_POST['correo'];
+    $_SESSION['nombre'] = $_POST['nombre'];
+    file_put_contents('json/datos.json', $json . PHP_EOL, FILE_APPEND | LOCK_EX);
   };
 };
 
-function guardarImagen($upload, $path) {
+
+
+/*function guardarImagen($upload, $path) {
     $erroresImg = [];
     if ($_FILES[$upload]['error'] == UPLOAD_ERR_OK) {
           $nombre = $_FILES[$upload]['name'];
@@ -254,7 +245,7 @@ function guardarImagen($upload, $path) {
         $erroresImg[] = "No pudo subirse la foto";
     }
     return $erroresImg;
-}
+}*/
 
 
 

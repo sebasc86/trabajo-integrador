@@ -1,7 +1,6 @@
 <?php
 include ("php/controller-registro-php.php");
 
-
  ?>
 
 
@@ -90,12 +89,7 @@ include ("php/controller-registro-php.php");
                   <?php endif; ?>
                 <?php endif; ?>
               </div>
-              <div class="input_group">
-                  <label class="label">Foto</label>
-                  <div class="cont_foto_usuario">
-                      <input type="file" name="foto_usuario">
-                  </div>
-              </div>
+
 
                 <?php if (!isset($_POST['submit'])):?>
                     <div class="input_group checkbox">
@@ -125,10 +119,6 @@ include ("php/controller-registro-php.php");
                   <?php endforeach ;?>
                   </div>
                 <?php endif; ?>
-
-
-
-
 
 
               <?php if (!isset($_POST['submit'])):?>
@@ -179,12 +169,20 @@ include ("php/controller-registro-php.php");
                 <div class="input_group checkbox">
                   <input type="checkbox" name="terminos" id="terminos" value="true" checked="">
                   <label for="terminos">Acepto los Términos y Condiciones</label>
+                  <span id='register_password_errorloc'></span>
                 </div>
               <?php endif; ?>
 
               <div class="file-upload">
                   <label for="upload" class="file-upload__label">Subir Imagen</label>
                   <input id="upload" class="file-upload__input" type="file" name="imgPerfil">
+                <?php if (isset($_FILES['imgPerfil'])) : ?>
+                  <?php if (validarImagen() == false): ?>
+                    <span id='register_password_errorloc' class='error' ><?php echo $errorImg ?></span>
+                  <?php endif; ?>
+                <?php else: ?>
+                  <span id='register_password_errorloc' class='permitido'> Solamente se permiten fotos .png o .jpg</span>
+                <?php endif; ?>
               </div>
 
     					<input type="submit" id="btn_submit" value="Enviar" name='submit'>

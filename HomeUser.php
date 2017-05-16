@@ -1,7 +1,6 @@
 <?php
 	include 'php/controller-registro-php.php';
-
-
+var_dump($correo);
 
 		if (isset($_SESSION['nickname'])){
 				$grabado ="Bienvenido".'  '.$nombreUsuario ."</strong><br/>";
