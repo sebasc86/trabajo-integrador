@@ -414,6 +414,10 @@ h2{
   top: 16px;
   left: 0;
 }
+.cont_foto_usuario{
+    display: inline-block;
+    margin-top: 10px;
+}
 
 .contenedor_formulario .formulario .input_group.checkbox label,
 .contenedor_formulario .formulario .input_group.radio label {

@@ -89,7 +89,12 @@ include ("php/controller-registro-php.php");
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
-
+              </div>
+              <div class="input_group">
+                  <label class="label">Foto</label>
+                  <div class="cont_foto_usuario">
+                      <input type="file" name="foto_usuario">
+                  </div>
               </div>
 
                 <?php if (!isset($_POST['submit'])):?>
