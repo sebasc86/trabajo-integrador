@@ -12,7 +12,7 @@
   </head>
   <body>
 
-    <?php include 'header.html' ;?>
+    <?php include 'header.php' ;?>
 
     <div class="home_content_4" id="anchor_content_4">
       <h1>Algunas preguntas frecuentes</h1>

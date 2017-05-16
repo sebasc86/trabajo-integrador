@@ -2,7 +2,6 @@
 include ("php/controller-registro-php.php");
 
 
-
  ?>
 
 
@@ -20,7 +19,7 @@ include ("php/controller-registro-php.php");
   </head>
   <body>
 
-    <?php include 'header.html' ;?>
+<?php include 'header.php' ?>
 
     <div class="registro_bienvenida">
       <h2>Registro de nuevo usuario</h2>
@@ -29,14 +28,14 @@ include ("php/controller-registro-php.php");
 
     <div class="contenedor_formulario">
     		<div class="wrap">
-    			<form action="" class="formulario" name="formulario-registro" method="post">
+    			<form action="" class="formulario" name="formulario-registro" method="post" enctype="multipart/form-data">
     				<div>
     					<div class="input_group">
     						<input class="inputs" type="text" id="nombre" name="nombre" value="<?php variable('nombre'); ?>">
     						<label class="label" for="nombre">Nombre:</label>
                   <?php if (isset($_POST['nombre'])): ?>
                     <?php if (validarNombre() == false): ?>
-                      <span id='register_name_errorloc' class='error'><?php echo $nombreError ;?>
+                      <span id='register_name_errorloc' class='error'><?php echo $nombreError;?>
                       </span>
                     <?php endif; ?>
                   <?php endif; ?>
@@ -57,8 +56,8 @@ include ("php/controller-registro-php.php");
     						<input class="inputs" type="email" id="correo" name="correo" value="<?php variable('correo'); ?>">
     						<label class="label" for="correo">Correo:</label>
                   <?php if (isset($_POST['correo'])): ?>
-                    <?php if (emailValidate() == false): ?>
-                      <span id='register_email_errorloc' class='error'><?php echo $emailError ;?>
+                    <?php if (emailValidate5() === false): ?>
+                      <span id='register_email_errorloc' class='error'><?php echo $emailError?>
                       </span>
                     <?php endif; ?>
                   <?php endif; ?>
@@ -131,15 +130,15 @@ include ("php/controller-registro-php.php");
                 <div class="input_group checkbox">
                   <input type="checkbox" name="accion[]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[]" id="acompaniante" value="acompaniante">
-                  <label for="acompaniante">Acompañante</label>
+                  <input type="checkbox" name="accion[]" id="acompañante" value="acompañante">
+                  <label for="acompañante">Acompañante</label>
                 </div>
               <?php elseif (validarAccion() == false): ?>
                 <div class="input_group checkbox">
                   <input type="checkbox" name="accion[]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[]" id="acompaniante" value="acompaniante">
-                  <label for="acompaniante">Acompañante</label>
+                  <input type="checkbox" name="accion[]" id="acompañante" value="acompañante">
+                  <label for="acompañante">Acompañante</label>
                   <span id='register_password_errorloc' class='error' ><?php echo $accionError ?></span>
                 </div>
 
@@ -150,9 +149,9 @@ include ("php/controller-registro-php.php");
                   <?php  if($value == "conductor") :?>
                       <input type="checkbox" name="accion[]" id="conductor" value="conductor" checked="">
                       <label for="conductor">Conductor</label>
-                  <?php elseif ($value == "acompaniante") :?>
-                      <input type="checkbox" name="accion[]" id="acompaniante" value="acompaniante" checked="">
-                      <label for="acompaniante">Acompañante</label>
+                  <?php elseif ($value == "acompañante") :?>
+                      <input type="checkbox" name="accion[]" id="acompañante" value="acompañante" checked="">
+                      <label for="acompañante">Acompañante</label>
                   <?php endif; ?>
                 <?php endforeach ;?>
                 </div>
@@ -178,12 +177,54 @@ include ("php/controller-registro-php.php");
                 </div>
               <?php endif; ?>
 
+              <div class="file-upload">
+                  <label for="upload" class="file-upload__label">Subir Imagen</label>
+                  <input id="upload" class="file-upload__input" type="file" name="imgPerfil">
+              </div>
+
     					<input type="submit" id="btn_submit" value="Enviar" name='submit'>
     				</div>
     			</form>
     		</div>
     	</div>
 
-      <?php include 'footer.html' ;?>
+    <div class="container_footer">
+      <footer>
+
+        <div class="footer_top">
+          <div class="columna1">
+            <label class="label_footer_col">SOBRE LA COMPAÑÍA</label>
+            <ul>
+              <li><a href="#">Sobre autopool</a></li>
+              <li><a href="#">Empleo</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="columna2">
+            <label class="label_footer_col">VIAJAR CON AUTOPOOL</label>
+            <ul>
+              <li><a href="#">Confianza y Seguridad</a></li>
+              <li><a href="#">Calificación de los Usuarios</a></li>
+              <li><a href="faq.html">Preguntas Frecuentes</a></li>
+              <li><a href="#">Confianza y Seguridad</a></li>
+            </ul>
+          </div>
+          <div class="columna3">
+            <label class="label_footer_col">INFORMACIÓN LEGAL</label>
+            <ul>
+              <li><a href="#">Políticas de Uso</a></li>
+              <li><a href="#">Aviso de Privacidad</a></li>
+              <li><a href="#">Políticas de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p>autopool - Todos los derechos reservados.</p>
+
+        </div>
+
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+include 'php/controller-login.php';
 
 
 function variable($tiponame) {
@@ -60,7 +61,7 @@ $nombre = trim($nombre);
 };
 
 
-//email
+
 $emailError = '';
 function emailValidate() {
   if(isset($_POST["correo"])) {
@@ -78,6 +79,40 @@ function emailValidate() {
   };
 };
 
+
+$errorEmail = '';
+function emailValidate5(){
+  if(isset($_POST['correo'])){
+        $email = trim($_POST['correo']);
+        $input = filter_var($email, FILTER_VALIDATE_EMAIL);
+		    $recurso = fopen("json\datos.json", 'r');
+        if($recurso){
+          while(($linea = fgets($recurso)) !== false){
+          $usuarios = json_decode($linea, true);
+              if(in_array($_POST['correo'], $usuarios)){
+                 $GLOBALS['emailError'] = 'El email registrado ya esta en uso';
+                 return false;
+              }elseif($_POST['correo'] == null){
+                $GLOBALS['emailError'] = "Falta completar campo";
+                return false;
+              }else if ($input === false) {
+                $GLOBALS['emailError'] = "El email ingresado no es válido";
+                return false;
+              }else {
+                return true;
+              };
+          };
+        };
+      };
+  };
+
+
+
+
+
+
+
+
 //contraseña
 
 //validar pass
@@ -87,7 +122,7 @@ function validarPass(){
   if(isset($_POST['password']) && isset($_POST["password2"])){
     $pass = $_POST["password"];
     $pass2 = $_POST["password2"];
-    if($pass == 0 && $pass2 == 0){
+    if($pass == 0 || $pass2 == 0){
         $GLOBALS['passError'] = "Falta completar campo";
         return false;
     } elseif ($pass != $pass2) {
@@ -166,8 +201,9 @@ function validarTerminos(){
    }
 };
 
+
 $miArray = [];
-if (validarPass() == true && validarNombre() == true && emailValidate() == true && validarPass() == true && validarSexo() == true && validarAccion() == true && validarTerminos()){
+if (validarPass() == true && validarNombre() == true && emailValidate5() == true && validarPass() == true && validarSexo() == true && validarAccion() == true && validarTerminos()){
   $miArray = [
     'nombre' => $_POST['nombre'],
     'apellido' => $_POST['apellido'],
@@ -178,8 +214,108 @@ if (validarPass() == true && validarNombre() == true && emailValidate() == true 
     'accion' => $_POST['accion'],
   ];
   $json = json_encode($miArray);
+  header("Location: ../trabajo-integrador/HomeUser.php");
+  $_SESSION['nickname'] = $_POST['correo'];
+  $_SESSION['nombre'] = $_POST['nombre'];
   file_put_contents('json/datos.json', $json . PHP_EOL, FILE_APPEND | LOCK_EX);
+  if (isset($_FILES['imgPerfil'])){
+    if ($_FILES['imgPerfil']['error'] == UPLOAD_ERR_OK) {
+      $filename = $_FILES['imgPerfil']['tmp_name'];
+      $ext = $_FILES["imgPerfil"]["name"];
+      $ext = pathinfo($ext, PATHINFO_EXTENSION); //jpg
+      $nombre = $_POST['correo'] . ".". $ext;
+      echo "$nombre";
+      echo "<br>";
+      $destination =  __DIR__ . "..\..\imagenperfil/" . $nombre;
+      echo "$destination";
+      echo "<br>";
+      move_uploaded_file($filename, $destination);
+    };
+  };
 };
+
+
+
+
+$nickname = '';
+$password = '';
+if(isset($_SESSION['nickname'])) {
+  $recurso = fopen("json/datos.json", 'r');
+  if ($recurso) {
+    while(($linea = fgets($recurso)) !== false ){
+        $usuarios = json_decode($linea, true);
+        if(in_array($_SESSION['nickname'], $usuarios)){
+          $nombreUsuario = $usuarios['nombre'];
+          $GLOBALS['password'] = $usuarios['password'];
+          $correo = $usuarios['correo'];
+        };
+      };
+    };
+  };
+
+
+
+
+
+
+
+
+  $passwordError2 = '';
+  $passwordError3 = '';
+
+  function validarCambioPass(){
+    $nrosLineas = '';
+    $passwordError2 = '';
+    $passwordError3 = '';
+    if(isset($_POST['nuevaPassword']) && isset($_POST["password2"])){
+      $pass = $_POST["password2"];
+      $pass2 = $_POST["nuevaPassword"];
+      if($pass == null || $pass2 == null){
+          $GLOBALS['passwordError2'] = "Falta completar 1 campo";
+          return false;
+      } elseif(strlen($pass2) < 6){
+          $GLOBALS['passwordError2'] = "es menor a 6 caracteres";
+          return false;
+      } elseif (!preg_match("/[a-z]/", $pass2)){
+          $GLOBALS['passwordError2'] = "La clave debe tener al menos una Minuscula";
+          return false;
+      } elseif(!preg_match("/[A-Z]/", $pass2)) {
+          $GLOBALS['passwordError2'] = "La clave debe tener al menos una Mayuscula";
+          return false;
+      } elseif (!preg_match("/[0-9]/", $pass2)) {
+          $GLOBALS['passwordError2'] = "La clave debe tener al menos un Número";
+          return false;
+      }else {
+
+              if(isset($_SESSION['nickname'])) {
+                if(isset($_POST['password2']) && isset($_POST['nuevaPassword']) && (password_verify($_POST['password2'], $GLOBALS['password']))== true){
+                $recurso = fopen("json/datos.json", 'a+');
+                $archivo = file('json/datos.json');
+                if ($recurso) {
+                  while(($linea = fgets($recurso)) !== false ){
+                      $usuarios = json_decode($linea, true);
+                      $nrosLineas++;
+                      if(in_array($_SESSION['nickname'], $usuarios)){
+                        unset($archivo[$nrosLineas-1]);
+                        file_put_contents('json/datos.json', join('', $archivo));
+                        $hashPass3 = password_hash($_POST['nuevaPassword'], PASSWORD_DEFAULT);
+                        $reemplazos = array('password' => "$hashPass3");
+                        $usuarioModificado = array_replace($usuarios, $reemplazos);
+                        $usuarioModificado =  json_encode($usuarioModificado);
+                        fwrite($recurso, $usuarioModificado . PHP_EOL);
+                        return true;
+                      }
+                    };
+                  };
+                }else {
+                  $GLOBALS['passwordError3'] = 'Su contraseña no coincide';
+                  return false;
+                };
+              };
+            };
+
+          };
+        };
 
 
 ?>

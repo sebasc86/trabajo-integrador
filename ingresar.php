@@ -1,3 +1,10 @@
+
+<?php
+include 'php/controller-login.php';
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,7 +19,7 @@
   </head>
   <body>
 
-    <?php include 'header.html' ;?>
+    <?php include 'header.php' ;?>
 
     <div class="registro_bienvenida">
       <h2>Ingresá a tu cuenta</h2>
@@ -30,6 +37,12 @@
     					<div class="input_group_ingresar">
     						<input type="password" id="pass" name="pass">
     						<label class="label" for="pass">Contraseña:</label>
+                <?php if (isset($_POST['pass'])): ?>
+                  <?php if (validarRegistro() == false): ?>
+                    <span id='register_name_errorloc' class='error'><?php echo $registroError ;?>
+                    </span>
+                  <?php endif; ?>
+                <?php endif; ?>
     					</div>
               <div class="input_group_ingresar checkbox">
     						<input type="checkbox" name="recordar_user" id="recordar_user" value="true">

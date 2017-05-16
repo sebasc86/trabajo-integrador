@@ -1,5 +1,16 @@
-
 {"nombre":"Sebastian","apellido":"Coscia","correo":"sebascoscia@gmail.com","password":"123456Ab","edad":"30","sexo":["hombre"],"accion":["conductor"]}
 {"nombre":"Jorge","apellido":"Lopez","correo":"jlopez@hotmail.com","password":"123456Ab","edad":"45","sexo":["hombre"],"accion":["conductor","acompaniante"]}
 {"nombre":"Jorge","apellido":"Lopez","correo":"jlopez@hotmail.com","password":"123456Ab","edad":"45","sexo":["hombre"],"accion":["conductor","acompaniante"]}
 {"nombre":"Sebastian","apellido":"prueba","correo":"jorge@gmail.com","password":"$2y$10$xk4G7Z\/hQbraVwT194HGQe2lFJTqxJI\/JjrO72xxYNrg3BjHBTBri","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"Coscia","correo":"sebascoscia@gmail.com","password":"123456Ab","edad":"30","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"Coscia","correo":"otro1@gmail.com","password":"$2y$10$eUOmldemt0RGGgxbfRq1fe9G2vSXch0Vb0Hu1vnfnwg29auZx4F6e","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"Coscia","correo":"otro2@gmail.com","password":"$2y$10$eUOmldemt0RGGgxbfRq1fe9G2vSXch0Vb0Hu1vnfnwg29auZx4F6e","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"Coscia","correo":"otro3@gmail.com","password":"$2y$10$eUOmldemt0RGGgxbfRq1fe9G2vSXch0Vb0Hu1vnfnwg29auZx4F6e","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"Coscia","correo":"otro4@gmail.com","password":"$2y$10$eUOmldemt0RGGgxbfRq1fe9G2vSXch0Vb0Hu1vnfnwg29auZx4F6e","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"prueba","correo":"jorge@gmail.com","password":"$2y$10$jbFq5GuoHFhiUdHvgvrnV.tJKuyetgzPn7Gyevnqk.uj.3WPOf\/bK","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"facu","apellido":"araujo","correo":"sadsad@hotmail.com","password":"$2y$10$c4SYE.t4SoLftadA4VcCvunD0u\/c1U6k64TkHRcSwzRv7YnghQm8e","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Fede","apellido":"hola","correo":"prueba99@gmail.com","password":"$2y$10$jbFq5GuoHFhiUdHvgvrnV.tJKuyetgzPn7Gyevnqk.uj.3WPOf\/bK","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sergio","apellido":"Coscia","correo":"scoscia@gmail.com","password":"$2y$10$PEnylEgElipGpfIDB9suxery08\/rMZ8nf9bsBa2FrBV8QC2MB\/abe","edad":"20","sexo":["hombre"],"accion":["conductor","acompa\u00f1ante"]}
+{"nombre":"Sebastian  ","apellido":"jose","correo":"prueba9999@gmail.com","password":"$2y$10$z2KmxkZ7Dm6JGMuVY2\/GVufuXm0SbS.UWGEVUtkrLxE6.kNJrVgQe","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"prueba","correo":"sonigaules@gmail.com","password":"$2y$10$FzrWWZyHGoJsI44obfjlf.UEOVwLBOv0HDJjMR8Wnx7c2nmWAOsYW","edad":"40","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Sebastian","apellido":"Coscia","correo":"prueba321@gmail.com","password":"$2y$10$PubGmAM9AdHJKVohxyaOF.yFmGZYjFRpU1FwVftSovqnTj07Mtaa2","edad":"20","sexo":["hombre"],"accion":["conductor"]}
