@@ -1,5 +1,8 @@
 <?php
 include ("php/controller-registro-php.php");
+if(isset($_SESSION['nickname'])){
+  header('Location: ../trabajo-integrador/HomeUser.php');
+}
 
  ?>
 

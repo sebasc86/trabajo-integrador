@@ -284,7 +284,7 @@ if(isset($_SESSION['nickname'])) {
       $pass = $_POST["password2"];
       $pass2 = $_POST["nuevaPassword"];
       if($pass == null || $pass2 == null){
-          $GLOBALS['passwordError2'] = "Falta completar 1 campo";
+          $GLOBALS['passwordError2'] = "Falta completar al menos un campo";
           return false;
       } elseif(strlen($pass2) < 6){
           $GLOBALS['passwordError2'] = "es menor a 6 caracteres";

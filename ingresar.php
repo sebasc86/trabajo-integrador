@@ -1,6 +1,11 @@
 
 <?php
 include 'php/controller-login.php';
+if(isset($_SESSION['nickname'])){
+  header('Location: ../trabajo-integrador/HomeUser.php');
+};
+
+
 
  ?>
 
@@ -31,8 +36,13 @@ include 'php/controller-login.php';
     				<div>
 
     					<div class="input_group_ingresar">
-    						<input type="email" id="correo" name="correo">
-    						<label class="label" for="correo">Correo:</label>
+                <?php if (isset($_COOKIE["nombreUsuario"])): ?>
+                  <input type="email" id="correo" name="correo" value="<?php echo $_COOKIE["nombreUsuario"] ?>">
+      						<label class="label" for="correo">Correo:</label>
+                  <?php else: ?>
+                    <input type="email" id="correo" name="correo">
+                    <label class="label" for="correo">Correo:</label>
+                <?php endif; ?>
     					</div>
     					<div class="input_group_ingresar">
     						<input type="password" id="pass" name="pass">
@@ -45,8 +55,14 @@ include 'php/controller-login.php';
                 <?php endif; ?>
     					</div>
               <div class="input_group_ingresar checkbox">
-    						<input type="checkbox" name="recordar_user" id="recordar_user" value="true">
-    						<label for="recordar_user">Recordarme</label>
+
+                <?php if (isset($_COOKIE["nombreUsuario"])): ?>
+                  <input type="checkbox" name="recordar_user" id="recordar_user" value="" checked="">
+                  <label for="recordar_user">Recordarme</label>
+                  <?php else: ?>
+                    <input type="checkbox" name="recordar_user" id="recordar_user" value="">
+                    <label for="recordar_user">Recordarme</label>
+                <?php endif; ?>
     					</div>
 
     					<input type="submit" id="btn_submit" value="Enviar">

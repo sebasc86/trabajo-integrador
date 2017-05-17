@@ -928,6 +928,13 @@ footer a{
     margin-left: 0px;
     max-width: 740px;
   }
+  .contenedor_formulario{
+      padding: 10px;
+  }
+  .wrap{
+      width: 100%;
+      padding: 15px;
+  }
 
 
 
@@ -1053,10 +1060,11 @@ h2{
   margin-left: auto;
   margin-right: auto;
   margin-top: 340px;
+  padding: 10px;
 }
 .contenedor_ingresar{
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .home_content_4 h1, .home_content_4_txt{
   font-size: 18px;
