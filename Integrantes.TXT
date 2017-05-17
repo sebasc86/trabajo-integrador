@@ -1,4 +1,4 @@
-SPRINT 1
+!!!!!! SPRINT 1
 Federico Heinen
   diseño de cada mockup
   diseño y codeo del footer
@@ -12,5 +12,22 @@ Sebastian Coscia
   arreglo footer
   media queries
 
-SPRINT 2
+
+!!!!!! SPRINT 2
+
 Paula Vazquez Blanco (nueva integrante)
+Subida de imagen perfil
+Arreglos Css
+cookies
+
+Sebastian Coscia
+registro
+validacion registro
+login
+validacion login
+session
+logout
+
+
+Federico Heinen
+-
