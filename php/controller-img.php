@@ -10,6 +10,7 @@ function validarImagen() {
       $ext = pathinfo($ext, PATHINFO_EXTENSION); //jpg
         if ($ext != "png" && $ext != "jpg") {
           $GLOBALS['errorImg'] = "No acepto la extensión";
+          return false;
         } else {
           $nombre = $_POST['correo'] . ".". $ext;
           echo "$nombre";

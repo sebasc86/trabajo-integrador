@@ -205,7 +205,7 @@ function validarTerminos(){
 
 $miArray = [];
 if (validarPass() == true && validarNombre() == true && emailValidate5() == true && validarPass() == true && validarSexo() == true && validarAccion() == true && validarTerminos()){
-    if(validarImagen() == true || $_FILES['imgPerfil']['name'] == 0){
+    if(validarImagen() == true || $_FILES['imgPerfil']['name'] == null){
     $miArray = [
       'nombre' => $_POST['nombre'],
       'apellido' => $_POST['apellido'],
@@ -225,27 +225,7 @@ if (validarPass() == true && validarNombre() == true && emailValidate5() == true
 
 
 
-/*function guardarImagen($upload, $path) {
-    $erroresImg = [];
-    if ($_FILES[$upload]['error'] == UPLOAD_ERR_OK) {
-          $nombre = $_FILES[$upload]['name'];
 
-          $archivo = $_FILES[$upload]['tmp_name'];
-
-          $ext = pathinfo($nombre, PATHINFO_EXTENSION);
-          if ($ext != "png" && $ext != "jpg") {
-              $erroresImg[] = "No acepto la extensión";
-          }
-          else {
-              move_uploaded_file($archivo, $path . '/' .$nombre);
-              $_SESSION['usuario']['img'] = '../tpi/img/' . $nombre;
-          }
-    }
-    else {
-        $erroresImg[] = "No pudo subirse la foto";
-    }
-    return $erroresImg;
-}*/
 
 
 
