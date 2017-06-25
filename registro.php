@@ -1,6 +1,6 @@
 <?php
 // include ("php/controller-registro-php.php");
-include 'php/register.controller.php';
+include 'php/controller-register.php';
 
 if(isset($_SESSION['login'])){
   header('Location: ../trabajo-integrador/profile.php');
