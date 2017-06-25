@@ -1,8 +1,8 @@
 
 <?php
 include 'php/controller-login.php';
-if(isset($_SESSION['nickname'])){
-  header('Location: ../trabajo-integrador/HomeUser.php');
+if(isset($_SESSION['login'])){
+  header('Location: ../trabajo-integrador/profile.php');
 };
 
 
@@ -37,7 +37,8 @@ if(isset($_SESSION['nickname'])){
 
     					<div class="input_group_ingresar">
                 <?php if (isset($_COOKIE["nombreUsuario"])): ?>
-                  <input type="email" id="correo" name="correo" value="<?php echo $_COOKIE["nombreUsuario"] ?>">
+                  <input type="email" id="email" name="email" value="<?php echo $_COOKIE["nombreUsuario"] ?>">
+
       						<label class="label" for="correo">Correo:</label>
                   <?php else: ?>
                     <input type="email" id="correo" name="correo">
@@ -45,11 +46,11 @@ if(isset($_SESSION['nickname'])){
                 <?php endif; ?>
     					</div>
     					<div class="input_group_ingresar">
-    						<input type="password" id="pass" name="pass">
+    						<input type="password" id="pass" name="password">
     						<label class="label" for="pass">Contraseña:</label>
-                <?php if (isset($_POST['pass'])): ?>
-                  <?php if (validarRegistro() == false): ?>
-                    <span id='register_name_errorloc' class='error'><?php echo $registroError ;?>
+                <?php if (isset($_POST['password'])): ?>
+                  <?php if ($validador != NULL): ?>
+                    <span id='register_name_errorloc' class='error'><?php echo $validador['email'] ;?>
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>

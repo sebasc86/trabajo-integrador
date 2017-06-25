@@ -19,7 +19,7 @@
         <header class="main-header">
 
           <ul class="login">
-            <?php if (isset($_SESSION['nickname'])): ?>
+            <?php if (isset($_SESSION['login'])): ?>
             <li><a id="none" href="">Registrarme</a></li>
             <li><a href="">Ingresar</a></li>
             <li><a href="HomeUser.php">Mi Cuenta</a></li>

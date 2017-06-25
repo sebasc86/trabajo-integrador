@@ -1,8 +1,11 @@
 <?php
-include ("php/controller-registro-php.php");
-if(isset($_SESSION['nickname'])){
-  header('Location: ../trabajo-integrador/HomeUser.php');
+// include ("php/controller-registro-php.php");
+include 'php/register.controller.php';
+
+if(isset($_SESSION['login'])){
+  header('Location: ../trabajo-integrador/profile.php');
 }
+
 
  ?>
 
@@ -33,160 +36,195 @@ if(isset($_SESSION['nickname'])){
     			<form action="" class="formulario" name="formulario-registro" method="post" enctype="multipart/form-data">
     				<div>
     					<div class="input_group">
-    						<input class="inputs" type="text" id="nombre" name="nombre" value="<?php variable('nombre'); ?>">
+    						<input class="inputs" type="text" id="nombre" name="nombre" value="<?php echo $usuario->nombre; ?>">
     						<label class="label" for="nombre">Nombre:</label>
-                  <?php if (isset($_POST['nombre'])): ?>
-                    <?php if (validarNombre() == false): ?>
-                      <span id='register_name_errorloc' class='error'><?php echo $nombreError;?>
+                   <?php if (isset($_POST['nombre'])): ?>
+                    <?php if (isset($validador['nombre'])): ?>
+                      <span id='register_name_errorloc' class='error'><?php echo $validador['nombre'];?>
                       </span>
                     <?php endif; ?>
                   <?php endif; ?>
     					</div>
 
               <div class="input_group">
-                <input class="inputs" type="text" id="apellido" name="apellido" value="<?php variable('apellido'); ?>">
+                <input class="inputs" type="text" id="apellido" name="apellido" value="<?php echo $usuario->apellido ;?>">
                 <label class="label" for="apellido">Apellido:</label>
                 <?php if (isset($_POST['apellido'])): ?>
-                  <?php if (validarApellido() == false): ?>
-                    <span id='register_name_errorloc' class='error'><?php echo $apellidoError; ?>
+                  <?php if (isset($validador['apellido'])): ?>
+                    <span id='register_name_errorloc' class='error'><?php echo $validador['apellido']; ?>
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
               </div>
 
     					<div class="input_group">
-    						<input class="inputs" type="email" id="correo" name="correo" value="<?php variable('correo'); ?>">
+    						<input class="inputs" type="email" id="correo" name="correo" value="<?php echo $usuario->email ;?>">
     						<label class="label" for="correo">Correo:</label>
                   <?php if (isset($_POST['correo'])): ?>
-                    <?php if (emailValidate5() === false): ?>
-                      <span id='register_email_errorloc' class='error'><?php echo $emailError?>
+                    <?php if (isset($validador['email'])): ?>
+                      <span id='register_email_errorloc' class='error'><?php echo $validador['email'] ;?>
                       </span>
                     <?php endif; ?>
                   <?php endif; ?>
     					</div>
+
+
     					<div class="input_group">
     						<input class="inputs" type="password" id="pass" name="password">
     						<label class="label" for="password">Contraseña:</label>
                 <?php if (isset($_POST['password'])): ?>
-                  <?php if (validarPass() == false): ?>
+                  <?php if (isset($validador['pass'])): ?>
                     <span id='register_password_errorloc' class='error'>
-                    <?php  echo $passError ;?>
+                    <?php  echo $validador['pass'] ;?>
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
+
+
+
               </div>
     					<div class="input_group">
     						<input class="inputs" type="password" id="password2" name="password2">
     						<label class="label" for="password2">Repetir Contraseña:</label>
     					</div>
 
-              <div class="input_group">
-                <input class="inputs" type="text" id="edad" name="edad" value="<?php variable('edad'); ?>">
-                <label class="label" for="edad">Edad:</label>
 
+
+            <div class="input_group">
+                <input class="inputs" type="text" id="edad" name="edad" value="<?php echo $usuario->edad ; ?>">
+                <label class="label" for="edad">Edad:</label>
                 <?php if (isset($_POST['edad'])): ?>
-                  <?php if (validarEdad() == false): ?>
-                    <span id='register_password_errorloc' class='error' >
-                    <?php echo $edadError; ?>
+                  <?php if (isset($validador['edad'])): ?>
+                    <span id='register_password_errorloc' class='error'>
+                    <?php  echo $validador['edad'] ;?>
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
-              </div>
+            </div>
 
 
-                <?php if (!isset($_POST['submit'])):?>
+                 <?php if (!isset($_POST['submit'])):?>
                     <div class="input_group checkbox">
-                      <input type="checkbox" name="sexo1[]" id="hombre" value="hombre">
+                      <input type="checkbox" name="sexo[]" id="hombre" value="hombre">
                       <label for="hombre">Hombre</label>
-                      <input type="checkbox" name="sexo1[]" id="mujer" value="mujer">
+                      <input type="checkbox" name="sexo[]" id="mujer" value="mujer">
                       <label for="mujer">Mujer</label>
                     </div>
-                <?php elseif (validarSexo() == false): ?>
-                    <div class="input_group checkbox">
-                      <input type="checkbox" name="sexo1[]" id="hombre" value="hombre">
-                      <label for="hombre">Hombre</label>
-                      <input type="checkbox" name="sexo1[]" id="mujer" value="mujer">
-                      <label for="mujer">Mujer</label>
-                      <span id='register_password_errorloc' class='error' ><?php echo $sexoError ?></span>
-                    </div>
-                <?php elseif (isset($_POST['sexo1'])): ?>
-                  <div class="input_group checkbox">
-                  <?php foreach ($_POST["sexo1"] as $value): ?>
-                    <?php  if($value == "hombre") :?>
-                        <input type="checkbox" name="sexo1[]" id="hombre" value="hombre" checked="">
+
+
+
+                  <?php elseif ($usuario->sexo == NULL): ?>
+                      <div class="input_group checkbox">
+                        <input type="checkbox" name="sexo[]" id="hombre" value="hombre">
                         <label for="hombre">Hombre</label>
-                    <?php elseif ($value == "mujer") :?>
-                        <input type="checkbox" name="sexo1[]" id="mujer" value="mujer" checked="">
+                        <input type="checkbox" name="sexo[]" id="mujer" value="mujer">
                         <label for="mujer">Mujer</label>
-                    <?php endif; ?>
-                  <?php endforeach ;?>
-                  </div>
-                <?php endif; ?>
+                        <span id='register_password_errorloc' class='error' ><?php echo $validador['sexo'] ; ?></span>
+                      </div>
+                  <?php elseif (count($usuario->sexo) == 2): ?>
+                      <div class="input_group checkbox">
+                        <input type="checkbox" name="sexo[]" id="hombre" value="hombre" checked="">
+                        <label for="hombre">Hombre</label>
+                        <input type="checkbox" name="sexo[]" id="mujer" value="mujer" checked="">
+                        <label for="mujer">Mujer</label>
+                        <span id='register_password_errorloc' class='error' ><?php echo $validador['sexo'] ; ?></span>
+                      </div>
 
+                  <?php elseif ($usuario->sexo): ?>
+                    <div class="input_group checkbox">
+                        <?php foreach ($usuario->sexo as $value): ?>
+                          <?php  if($value == "hombre") :?>
+                              <input type="checkbox" name="sexo[]" id="hombre" value="hombre" checked="">
+                              <label for="hombre">Hombre</label>
+                              <input type="checkbox" name="sexo[]" id="mujer" value="mujer">
+                              <label for="mujer">Mujer</label>
+                          <?php elseif ($value == "mujer") :?>
+                            <input type="checkbox" name="sexo[]" id="hombre" value="hombre">
+                            <label for="hombre">Hombre</label>
+                              <input type="checkbox" name="sexo[]" id="mujer" value="mujer" checked="">
+                              <label for="mujer">Mujer</label>
+                          <?php endif; ?>
+                        <?php endforeach ;?>
+                    </div>
 
-              <?php if (!isset($_POST['submit'])):?>
-                <div class="input_group checkbox">
-                  <input type="checkbox" name="accion[]" id="conductor" value="conductor">
-                  <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[]" id="acompañante" value="acompañante">
-                  <label for="acompañante">Acompañante</label>
-                </div>
-              <?php elseif (validarAccion() == false): ?>
-                <div class="input_group checkbox">
-                  <input type="checkbox" name="accion[]" id="conductor" value="conductor">
-                  <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[]" id="acompañante" value="acompañante">
-                  <label for="acompañante">Acompañante</label>
-                  <span id='register_password_errorloc' class='error' ><?php echo $accionError ?></span>
-                </div>
-
-
-              <?php elseif (isset($_POST['accion'])): ?>
-                <div class="input_group checkbox">
-                <?php foreach ($_POST["accion"] as $value): ?>
-                  <?php  if($value == "conductor") :?>
-                      <input type="checkbox" name="accion[]" id="conductor" value="conductor" checked="">
-                      <label for="conductor">Conductor</label>
-                  <?php elseif ($value == "acompañante") :?>
-                      <input type="checkbox" name="accion[]" id="acompañante" value="acompañante" checked="">
-                      <label for="acompañante">Acompañante</label>
                   <?php endif; ?>
-                <?php endforeach ;?>
-                </div>
-              <?php endif; ?>
+
+
+
 
 
               <?php if (!isset($_POST['submit'])):?>
-
-      					<div class="input_group checkbox">
-      						<input type="checkbox" name="terminos[]" id="terminos" value="true">
-      						<label for="terminos">Acepto los Términos y Condiciones</label>
-      					</div>
-              <?php elseif (validarTerminos() == false): ?>
                 <div class="input_group checkbox">
-                  <input type="checkbox" name="terminos" id="terminos" value="true">
-                  <label for="terminos">Acepto los Términos y Condiciones</label>
-                  <span id='register_password_errorloc' class='error' ><?php echo $terminosError ?></span>
+                  <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
+                  <label for="conductor">Conductor</label>
+                  <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
+                  <label for="acompañante">Acompañante</label>
                 </div>
-              <?php elseif (isset($_POST['terminos'][0])): ?>
+              <?php elseif ($usuario->accion == NULL): ?>
                 <div class="input_group checkbox">
-                  <input type="checkbox" name="terminos" id="terminos" value="true" checked="">
-                  <label for="terminos">Acepto los Términos y Condiciones</label>
-                  <span id='register_password_errorloc'></span>
+                  <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
+                  <label for="conductor">Conductor</label>
+                  <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
+                  <label for="acompañante">Acompañante</label>
+                  <span id='register_password_errorloc' class='error' ><?php echo $validador['accion'] ;?></span>
+                </div>
+
+
+              <?php elseif ($usuario->accion): ?>
+                <div class="input_group checkbox">
+                <?php if ($usuario->accion['conductor'] == 'conductor' && $usuario->accion['acompañante'] == ''): ?>
+                        <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked="">
+                        <label for="conductor">Conductor</label>
+                        <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
+                        <label for="acompañante">Acompañante</label>
+                  <?php elseif ($usuario->accion['conductor'] == '' && $usuario->accion['acompañante'] == 'acompañante') :?>
+                        <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
+                        <label for="conductor">Conductor</label>
+                        <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante" checked="">
+                        <label for="acompañante">Acompañante</label>
+                  <?php elseif ($usuario->accion['conductor'] == 'conductor' && $usuario->accion['acompañante'] == 'acompañante') :?>
+                        <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked="">
+                        <label for="conductor">Conductor</label>
+                        <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante" checked="">
+                        <label for="acompañante">Acompañante</label>
+                  <?php endif; ?>
+
                 </div>
               <?php endif; ?>
 
-              <div class="file-upload">
+
+
+              <?php if (!isset($_POST['submit'])):?>
+                <div class="input_group checkbox">
+                  <input type="checkbox" name="terminos" id="terminos" value="terminos">
+                  <label for="terminos">Acepto los Términos y Condiciones</label>
+                </div>
+              <?php elseif ($usuario->terminos) :?>
+                <div class="input_group checkbox">
+                  <input type="checkbox" name="terminos" id="terminos" value="terminos" checked="">
+                  <label for="terminos">Acepto los Términos y Condiciones</label>
+                </div>
+              <?php elseif ($usuario->terminos == NULL) :?>
+                <div class="input_group checkbox">
+                  <input type="checkbox" name="terminos" id="terminos" value="terminos">
+                  <label for="terminos">Acepto los Términos y Condiciones</label>
+                  <span id='register_password_errorloc' class='error' ><?php echo $validador['terminos'] ;?></span>
+                </div>
+
+
+              <?php endif; ?>
+
+            <div class="file-upload">
                   <label for="upload" class="file-upload__label">Subir Imagen</label>
                   <input id="upload" class="file-upload__input" type="file" name="imgPerfil">
                 <?php if (isset($_FILES['imgPerfil'])) : ?>
-                  <?php if (validarImagen() == false): ?>
-                    <span id='register_password_errorloc' class='error' ><?php echo $errorImg ?></span>
+                  <?php if ($usuario->imagen['imgPerfil'] && isset($validador['imagen'])) : ?>
+                    <span id='register_password_errorloc' class='error' ><?php echo $validador['imagen'] ;?></span>
                   <?php endif; ?>
                 <?php else: ?>
                   <span id='register_password_errorloc' class='permitido'> Solamente se permiten fotos .png o .jpg</span>
                 <?php endif; ?>
-              </div>
+            </div>
 
     					<input type="submit" id="btn_submit" value="Enviar" name='submit'>
     				</div>

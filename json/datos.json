@@ -16,4 +16,5 @@
 {"nombre":"Sebastian","apellido":"Coscia","correo":"prueba321@gmail.com","password":"$2y$10$PubGmAM9AdHJKVohxyaOF.yFmGZYjFRpU1FwVftSovqnTj07Mtaa2","edad":"20","sexo":["hombre"],"accion":["conductor"]}
 {"nombre":"Prueba","apellido":"Prueba","correo":"12prueba@hotmail.com","password":"$2y$10$bFYf454yA9TSXMd9t9EnuevJwEkBf2daa3roLZOSi4KU6t10bH52.","edad":"20","sexo":["hombre"],"accion":["conductor"]}
 {"nombre":"Sebastian","apellido":"Coscia","correo":"saraza@hotmail.com","password":"$2y$10$34bXxQesOy0beqIRt5XruuF3Bt5m8BLBXAhtFSgoy0eQQwxVgIVuy","edad":"20","sexo":["hombre"],"accion":["conductor"]}
-{"nombre":"Prueba","apellido":"Prueba","correo":"prueba100@gmail.com","password":"$2y$10$uV.7rX1IOrDvBDJCiySU7.l3DimzyHoDVY3YumUS4UU9tl4lONHPy","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Prueba","apellido":"Prueba","correo":"prueba100@gmail.com","password":"$2y$10$iCbQDlPs.TtmJ48t1FM1re3zgYIccWSGl8z4ZDoBrO7\/qdaEfdTwO","edad":"20","sexo":["hombre"],"accion":["conductor"]}
+{"nombre":"Prueba","apellido":"seba","correo":"lala@gmail.com","password":"$2y$10$6ejZPjiaHo5nQ\/Q2PeHyUOuahBbVKn6UqdcN6El5o1kgfHqMP00ie","edad":"20","sexo":["hombre"],"accion":["conductor"]}
