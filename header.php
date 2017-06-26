@@ -1,4 +1,7 @@
+<?php
+require_once 'php/controller-login.php';
 
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -22,7 +25,7 @@
             <?php if (isset($_SESSION['login'])): ?>
             <li><a id="none" href="">Registrarme</a></li>
             <li><a href="">Ingresar</a></li>
-            <li><a href="HomeUser.php">Mi Cuenta</a></li>
+            <li><a href="profile.php">Mi Cuenta</a></li>
             <li><a href="logout.php">Desloguear</a></li>
 
 
