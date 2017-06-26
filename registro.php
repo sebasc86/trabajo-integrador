@@ -2,6 +2,7 @@
 // include ("php/controller-registro-php.php");
 include 'php/controller-register.php';
 
+
 if(isset($_SESSION['login'])){
   header('Location: ../trabajo-integrador/profile.php');
 }
@@ -38,40 +39,47 @@ if(isset($_SESSION['login'])){
     					<div class="input_group">
     						<input class="inputs" type="text" id="nombre" name="nombre" value="<?php echo $usuario->nombre; ?>">
     						<label class="label" for="nombre">Nombre:</label>
+
                    <?php if (isset($_POST['nombre'])): ?>
                     <?php if (isset($validador['nombre'])): ?>
                       <span id='register_name_errorloc' class='error'><?php echo $validador['nombre'];?>
                       </span>
                     <?php endif; ?>
                   <?php endif; ?>
+
     					</div>
 
               <div class="input_group">
                 <input class="inputs" type="text" id="apellido" name="apellido" value="<?php echo $usuario->apellido ;?>">
                 <label class="label" for="apellido">Apellido:</label>
+
                 <?php if (isset($_POST['apellido'])): ?>
                   <?php if (isset($validador['apellido'])): ?>
                     <span id='register_name_errorloc' class='error'><?php echo $validador['apellido']; ?>
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
+
               </div>
 
     					<div class="input_group">
     						<input class="inputs" type="email" id="correo" name="correo" value="<?php echo $usuario->email ;?>">
     						<label class="label" for="correo">Correo:</label>
+
                   <?php if (isset($_POST['correo'])): ?>
                     <?php if (isset($validador['email'])): ?>
                       <span id='register_email_errorloc' class='error'><?php echo $validador['email'] ;?>
                       </span>
                     <?php endif; ?>
                   <?php endif; ?>
+
     					</div>
 
 
     					<div class="input_group">
     						<input class="inputs" type="password" id="pass" name="password">
     						<label class="label" for="password">Contraseña:</label>
+
                 <?php if (isset($_POST['password'])): ?>
                   <?php if (isset($validador['pass'])): ?>
                     <span id='register_password_errorloc' class='error'>
@@ -80,9 +88,8 @@ if(isset($_SESSION['login'])){
                   <?php endif; ?>
                 <?php endif; ?>
 
-
-
               </div>
+
     					<div class="input_group">
     						<input class="inputs" type="password" id="password2" name="password2">
     						<label class="label" for="password2">Repetir Contraseña:</label>
@@ -93,6 +100,7 @@ if(isset($_SESSION['login'])){
             <div class="input_group">
                 <input class="inputs" type="text" id="edad" name="edad" value="<?php echo $usuario->edad ; ?>">
                 <label class="label" for="edad">Edad:</label>
+
                 <?php if (isset($_POST['edad'])): ?>
                   <?php if (isset($validador['edad'])): ?>
                     <span id='register_password_errorloc' class='error'>
@@ -100,6 +108,7 @@ if(isset($_SESSION['login'])){
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
+                
             </div>
 
 

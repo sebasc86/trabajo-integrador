@@ -18,8 +18,15 @@ class ValidadorLogin extends Validador {
 								$usuario->setEmail($email);
 								$input = filter_var($email, FILTER_VALIDATE_EMAIL);
 								$userDB = $usuario->find($input);
-								$usuario->setNombre($userDB->nombre);
-								$hashPass = password_verify($usuario->password, $userDB->password);
+								if($userDB == true){
+									$usuario->setNombre($userDB->nombre);
+									$accion = [
+										'conductor' => $userDB->conductor,
+										'acompañante' => $userDB->acompañante
+									];
+									$usuario->setAccion($accion);
+									$hashPass = password_verify($usuario->password, $userDB->password);
+								}
 								if ($input === false) {
 									self::$errors['email'] = 	"El password o el email ingresado no es correcto";
 								}else if ($userDB == false || $hashPass == false) {

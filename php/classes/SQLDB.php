@@ -11,7 +11,6 @@ class SQLDB extends DB{
   private $user;
   private $pass;
   private $db;
-  private static $save = false;
 
   public function __construct($host, $nameDB, $user, $pass)
   {
@@ -59,7 +58,7 @@ class SQLDB extends DB{
 
   public function save($usuario){
 
-    if(ValidadorRegistro::$errors == NULL && $usuario->nombre !== NULL && !isset($_SESSION)){
+    if(ValidadorRegistro::$errors == NULL && $usuario->nombre !== NULL ){
       if(self::find($usuario->email) == NULL) {
         $sql = self::insert();
         $stmt = self::connect()->prepare($sql);
@@ -73,17 +72,18 @@ class SQLDB extends DB{
         $stmt -> bindValue(':acompanante', $usuario->accion['acompañante'],  PDO::PARAM_STR);
         $stmt -> bindValue(':foto_perfil', $usuario->imagen,  PDO::PARAM_STR);
         $stmt->execute();
-      }
-    } elseif(ValidadorProfile::$errors == NULL && isset($_SESSION) && $usuario->password != NULL){
-        $sql = self::update();
-        $stmt = self::connect()->prepare($sql);
-        $stmt->bindValue(':password', $usuario->password, PDO::PARAM_STR);
-        $stmt->bindValue(':mail', $usuario->email, PDO::PARAM_STR);
-        $stmt -> bindValue(':conductor', $usuario->accion['conductor'],  PDO::PARAM_STR);
-        $stmt -> bindValue(':acompanante', $usuario->accion['acompañante'],  PDO::PARAM_STR);
-        $stmt->execute();
+      }elseif(ValidadorProfile::$errors == NULL && $usuario->password != NULL && isset($_SESSION)){
+          $sql = self::update();
+          $stmt = self::connect()->prepare($sql);
+          $stmt->bindValue(':password', $usuario->password, PDO::PARAM_STR);
+          $stmt->bindValue(':mail', $usuario->email, PDO::PARAM_STR);
+          // $stmt -> bindValue(':conductor', $usuario->accion['conductor'],  PDO::PARAM_STR);
+          // $stmt -> bindValue(':acompanante', $usuario->accion['acompañante'],  PDO::PARAM_STR);
+          $stmt->execute();
+
+     }
     }
-  }
+}
 
 
 

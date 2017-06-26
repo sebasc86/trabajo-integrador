@@ -13,17 +13,13 @@ $validador = new ValidadorLogin();
 $validador = $validador->validar($usuario);
 
 
+
 if($validador == NULL){
   $_SESSION['login'] = true;
   $_SESSION['correo'] = $usuario->email;
   $_SESSION['nombre'] = $usuario->nombre;
- }
+  $_SESSION['accion'] = $usuario->accion;
 
-
-
-//
-//
-if($validador == NULL){
 	if(isset($_POST["recordar_user"])){
 			setcookie("usuario", $_POST['correo'] ,time()+(60*60*24),'/');
 	}

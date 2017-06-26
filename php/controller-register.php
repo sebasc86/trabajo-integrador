@@ -20,12 +20,16 @@ $usuario->toModel($_POST);
 $validador = new ValidadorRegistro();
 $validador = $validador->validar($usuario);
 $usuario->save($usuario);
+var_dump($_SESSION);
 
- if(isset($usuario->save)){
-  $_SESSION['login'] = true;
-  $_SESSION['correo'] = $usuario->email;
-  $_SESSION['nombre'] = $usuario->nombre;
- }
+
+if($usuario->find($usuario->email) != NULL && $validador == NULL){
+$_SESSION['login'] = true;
+$_SESSION['correo'] = $usuario->email;
+$_SESSION['nombre'] = $usuario->nombre;
+$_SESSION['accion'] = $usuario->accion;
+}
+
 
 
 

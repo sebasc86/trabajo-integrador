@@ -100,11 +100,20 @@
 
 
 							<div class="input_group checkbox">
-								<?php var_dump ($validador['conductor']);?>
-									<input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked="">
+								<?php if ($_SESSION['accion']['conductor'] != NULL ): ?>
+									<input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked=''>
+								<?php else: ?>
+									<input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
+								<?php endif; ?>
 									<label for="conductor">Conductor</label>
 
-								<input type="checkbox" name="accion[acompanante]" id="acompañante" value="acompañante">
+								<?php if ($_SESSION['accion']['acompañante'] != NULL): ?>
+									<input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante" checked=''>
+								<?php else: ?>
+									<input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
+								<?php endif; ?>
+
+
 								<label for="acompañante">Acompañante</label>
 							</div>
 
