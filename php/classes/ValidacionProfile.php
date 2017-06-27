@@ -6,7 +6,7 @@ require_once 'SQLDB.php';
 class ValidadorProfile extends Validador {
 
 	public static $errors = [];
-	public static $accion = [];
+
 
 	public function validar($usuario) {
 
@@ -41,28 +41,25 @@ class ValidadorProfile extends Validador {
 	}
 
 	// validar accion;
-	$userDB = $usuario->find($usuario->email);
-	$accion['acompanante'] = $userDB ->acompanante;
-	$accion['conductor'] = $userDB ->conductor;
 
-	if (isset($_POST['submit'])){
-		if(!isset($usuario->accion)){
-				self::$errors['accion'] = 'Tiene que elegir una opción';
-			 }elseif(count($usuario->accion) != 2){
-				 if(isset($usuario->accion['conductor'])){
-						$usuario->setAccion($usuario->accion = [
-							'conductor' => 'conductor',
-							'acompañante' => '',
-					]);
-
-			 }else {
-				 $usuario->setAccion($usuario->accion = [
-					 'conductor' => '',
-					 'acompañante' => 'acompañante',
-				 ]);
-			 }
-		 }
-	};
+	// if (isset($_POST['submit'])){
+	// 	if(!isset($usuario->accion)){
+	// 			self::$errors['accion'] = 'Tiene que elegir una opción';
+	// 		 }elseif(count($usuario->accion) != 2){
+	// 			 if(isset($usuario->accion['conductor'])){
+	// 					$usuario->setAccion($usuario->accion = [
+	// 						'conductor' => 'conductor',
+	// 						'acompanante' => '',
+	// 				]);
+	//
+	// 		 }else {
+	// 			 $usuario->setAccion($usuario->accion = [
+	// 				 'conductor' => '',
+	// 				 'acompanante' => 'acompanante',
+	// 			 ]);
+	// 		 }
+	// 	 }
+	// };
 
 
 		return self::$errors;

@@ -22,7 +22,7 @@ class ValidadorLogin extends Validador {
 									$usuario->setNombre($userDB->nombre);
 									$accion = [
 										'conductor' => $userDB->conductor,
-										'acompañante' => $userDB->acompañante
+										'acompanante' => $userDB->acompanante
 									];
 									$usuario->setAccion($accion);
 									$hashPass = password_verify($usuario->password, $userDB->password);

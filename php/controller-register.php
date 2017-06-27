@@ -17,10 +17,15 @@ require_once 'classes/ValidacionProfile.php';
 $db = new SQLDB('localhost', 'autopool', 'root', '');
 $usuario = new Usuario($db);
 $usuario->toModel($_POST);
+$usuario->agregarImagen($_FILES);
 $validador = new ValidadorRegistro();
+
 $validador = $validador->validar($usuario);
 $usuario->save($usuario);
-var_dump($_SESSION);
+var_dump($usuario->imagen['imgPerfil']);
+echo "<hr>";
+var_dump($validador);
+
 
 
 if($usuario->find($usuario->email) != NULL && $validador == NULL){

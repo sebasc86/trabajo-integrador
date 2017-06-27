@@ -146,13 +146,13 @@ class ValidadorRegistro extends Validador {
 						 if(isset($usuario->accion['conductor'])){
 							 	$usuario->setAccion($usuario->accion = [
 									'conductor' => 'conductor',
-									'acompañante' => '',
+									'acompanante' => '',
 							]);
 
 					 }else {
 						 $usuario->setAccion($usuario->accion = [
 							 'conductor' => '',
-							 'acompañante' => 'acompañante',
+							 'acompanante' => 'acompanante',
 						 ]);
 					 }
 				 }
@@ -180,8 +180,7 @@ class ValidadorRegistro extends Validador {
 	          move_uploaded_file($filename, $destination);
 						$usuario->setImagen($nombre);
 	        };
-	    }else {
-	      $usuario->setImagen(NULL);
+
 	    };
 
 	  };

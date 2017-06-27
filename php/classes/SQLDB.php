@@ -69,7 +69,7 @@ class SQLDB extends DB{
         $stmt -> bindValue(':edad', $usuario->edad, PDO::PARAM_INT);
         $stmt -> bindValue(':sexo', $usuario->sexo[0],  PDO::PARAM_STR);
         $stmt -> bindValue(':conductor', $usuario->accion['conductor'],  PDO::PARAM_STR);
-        $stmt -> bindValue(':acompanante', $usuario->accion['acompañante'],  PDO::PARAM_STR);
+        $stmt -> bindValue(':acompanante', $usuario->accion['acompanante'],  PDO::PARAM_STR);
         $stmt -> bindValue(':foto_perfil', $usuario->imagen,  PDO::PARAM_STR);
         $stmt->execute();
       }elseif(ValidadorProfile::$errors == NULL && $usuario->password != NULL && isset($_SESSION)){
@@ -78,7 +78,7 @@ class SQLDB extends DB{
           $stmt->bindValue(':password', $usuario->password, PDO::PARAM_STR);
           $stmt->bindValue(':mail', $usuario->email, PDO::PARAM_STR);
           // $stmt -> bindValue(':conductor', $usuario->accion['conductor'],  PDO::PARAM_STR);
-          // $stmt -> bindValue(':acompanante', $usuario->accion['acompañante'],  PDO::PARAM_STR);
+          // $stmt -> bindValue(':acompanante', $usuario->accion['acompanante'],  PDO::PARAM_STR);
           $stmt->execute();
 
      }

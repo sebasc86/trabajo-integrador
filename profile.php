@@ -107,14 +107,14 @@
 								<?php endif; ?>
 									<label for="conductor">Conductor</label>
 
-								<?php if ($_SESSION['accion']['acompañante'] != NULL): ?>
-									<input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante" checked=''>
+								<?php if ($_SESSION['accion']['acompanante'] != NULL): ?>
+									<input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante" checked=''>
 								<?php else: ?>
-									<input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
+									<input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
 								<?php endif; ?>
 
 
-								<label for="acompañante">Acompañante</label>
+								<label for="acompanante">Acompanante</label>
 							</div>
 
 							 <input type="submit" id="btn_submit" value="Enviar" name='submit'>

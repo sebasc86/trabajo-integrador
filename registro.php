@@ -108,7 +108,7 @@ if(isset($_SESSION['login'])){
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
-                
+
             </div>
 
 
@@ -166,36 +166,36 @@ if(isset($_SESSION['login'])){
                 <div class="input_group checkbox">
                   <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
-                  <label for="acompañante">Acompañante</label>
+                  <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
+                  <label for="acompanante">Acompanante</label>
                 </div>
               <?php elseif ($usuario->accion == NULL): ?>
                 <div class="input_group checkbox">
                   <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
-                  <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
-                  <label for="acompañante">Acompañante</label>
+                  <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
+                  <label for="acompanante">Acompanante</label>
                   <span id='register_password_errorloc' class='error' ><?php echo $validador['accion'] ;?></span>
                 </div>
 
 
               <?php elseif ($usuario->accion): ?>
                 <div class="input_group checkbox">
-                <?php if ($usuario->accion['conductor'] == 'conductor' && $usuario->accion['acompañante'] == ''): ?>
+                <?php if ($usuario->accion['conductor'] == 'conductor' && $usuario->accion['acompanante'] == ''): ?>
                         <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked="">
                         <label for="conductor">Conductor</label>
-                        <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante">
-                        <label for="acompañante">Acompañante</label>
-                  <?php elseif ($usuario->accion['conductor'] == '' && $usuario->accion['acompañante'] == 'acompañante') :?>
+                        <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
+                        <label for="acompanante">Acompanante</label>
+                  <?php elseif ($usuario->accion['conductor'] == '' && $usuario->accion['acompanante'] == 'acompanante') :?>
                         <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
                         <label for="conductor">Conductor</label>
-                        <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante" checked="">
-                        <label for="acompañante">Acompañante</label>
-                  <?php elseif ($usuario->accion['conductor'] == 'conductor' && $usuario->accion['acompañante'] == 'acompañante') :?>
+                        <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante" checked="">
+                        <label for="acompanante">Acompanante</label>
+                  <?php elseif ($usuario->accion['conductor'] == 'conductor' && $usuario->accion['acompanante'] == 'acompanante') :?>
                         <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked="">
                         <label for="conductor">Conductor</label>
-                        <input type="checkbox" name="accion[acompañante]" id="acompañante" value="acompañante" checked="">
-                        <label for="acompañante">Acompañante</label>
+                        <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante" checked="">
+                        <label for="acompanante">Acompanante</label>
                   <?php endif; ?>
 
                 </div>
