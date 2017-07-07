@@ -50,7 +50,7 @@ class ValidadorRegistro extends Validador {
 
 
 	    //validar email
-
+				
 			  if(isset($usuario)){
 							if(isset($usuario->email) && $usuario->email == NULL){
 								self::$errors['email'] = "Falta completar campo";

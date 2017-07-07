@@ -34,13 +34,17 @@ class SQLDB extends DB{
   }
 
 
-  public function findAll($model) {
+  public function findAll()
+      {
 
-        // $query = $db->prepare("SELECT $value from usuario where id = 'email'");
-        // $query->execute();
-        // $email = $query->fetch(PDO::FETCH_ASSOC);
-        // echo $email['email'];
-  }
+        $db = new PDO("mysql:host=localhost;dbname=autopool",'root','');
+        $query = $db->prepare("SELECT * from usuario" );
+        $query->execute();
+        $registro = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $registro;
+
+
+      }
 
 
   public function find($value)
