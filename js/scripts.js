@@ -24,9 +24,17 @@ function cambiarPaletaCss() {
     if(typeof formRegistro !== "undefined"){
         formRegistro.addEventListener('submit', function(evento) {
             evento.preventDefault();
-            if(validarRegistro().length == 0) {
+            /*if(validarRegistro().length == 0) {
                 formRegistro.submit();
-            }
+            }*/
+            if(validarRegistro().length > 0){
+              console.log("hay errores")
+              console.log(validarRegistro())
+            } else {
+              console.log("esta validado");
+            formRegistro.submit()
+
+          }
         });
     }
 
@@ -34,9 +42,17 @@ function cambiarPaletaCss() {
     if(typeof formLogin !== "undefined"){
         formLogin.addEventListener('submit', function(evento) {
             evento.preventDefault();
-            if(validarLogin().length == 0) {
+            /*if(validarLogin().length == 0) {
                 formLogin.submit();
-            }
+            }*/
+            if(validarLogin().length > 0){
+              console.log("hay errores")
+              console.log(validarLogin())
+            } else {
+              console.log("esta validado");
+            formLogin.submit()
+
+          }
         });
     }
 
