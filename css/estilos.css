@@ -55,7 +55,10 @@ ul.login li:first-child a{
 	display: none;
 }
 
-
+span.haserror {
+    font-size: 14px;
+    color: red;
+}
 .main-nav ul{
 	max-width: 1000px;
 	list-style: none;
@@ -419,7 +422,7 @@ h2{
     margin-top: 10px;
 }
 
-.contenedor_formulario .formulario .input_group.checkbox label,
+/*.contenedor_formulario .formulario .input_group.checkbox label,
 .contenedor_formulario .formulario .input_group.radio label {
   display: inline-block;
   cursor: pointer;
@@ -429,12 +432,12 @@ h2{
   font-size: 1em;
   border-radius: 3px;
 }
-
+*/
 .contenedor_formulario .formulario .input_group.checkbox label:hover, .contenedor_formulario .formulario .input_group.radio label:hover {
   background: #e0e0e0;
 }
 
-.contenedor_formulario .formulario .input_group.checkbox label:before, .contenedor_formulario .formulario .input_group.radio label:before {
+/*.contenedor_formulario .formulario .input_group.checkbox label:before, .contenedor_formulario .formulario .input_group.radio label:before {
   content: "";
   display: inline-block;
   width: 17px;
@@ -445,7 +448,7 @@ h2{
   background: none;
   border: 2px solid #e0e0e0;
 }
-
+*/
 .contenedor_formulario .formulario .input_group.error label:before {
   border: 2px solid #e0e0e0;
 }

@@ -22,9 +22,9 @@ $validador = new ValidadorRegistro();
 
 $validador = $validador->validar($usuario);
 $usuario->save($usuario);
-var_dump($usuario->imagen['imgPerfil']);
-echo "<hr>";
-var_dump($validador);
+//var_dump($usuario->imagen['imgPerfil']);
+//echo "<hr>";
+//var_dump($validador);
 
 
 

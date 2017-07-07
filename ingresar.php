@@ -35,7 +35,7 @@ if(isset($_SESSION['login'])){
     			<form action="" class="ingresar" name="formulario_ingreso" method="post">
     				<div>
 
-    					<div class="input_group_ingresar">
+    					<div class="input_group_ingresar ingresar_email">
                 <?php if (isset($_COOKIE["nombreUsuario"])): ?>
                   <input type="email" id="email" name="email" value="<?php echo $_COOKIE["nombreUsuario"] ?>">
 
@@ -43,11 +43,13 @@ if(isset($_SESSION['login'])){
                   <?php else: ?>
                     <input type="email" id="correo" name="correo">
                     <label class="label" for="correo">Correo:</label>
+                    <span class="haserror" id="error_email"></span>
                 <?php endif; ?>
     					</div>
-    					<div class="input_group_ingresar">
+    					<div class="input_group_ingresar ingresar_password">
     						<input type="password" id="pass" name="password">
     						<label class="label" for="pass">Contraseña:</label>
+                            <span class="haserror" id="error_password"></span>
                 <?php if (isset($_POST['password'])): ?>
                   <?php if ($validador != NULL): ?>
                     <span id='register_name_errorloc' class='error'><?php echo $validador['email'] ;?>
@@ -66,7 +68,7 @@ if(isset($_SESSION['login'])){
                 <?php endif; ?>
     					</div>
 
-    					<input type="submit" id="btn_submit" value="Enviar">
+    					<input type="submit" id="btn_submit_login" value="Enviar">
     				</div>
     			</form>
           <br>
@@ -75,6 +77,6 @@ if(isset($_SESSION['login'])){
     	</div>
 
       <?php include 'footer.html' ;?>
-
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

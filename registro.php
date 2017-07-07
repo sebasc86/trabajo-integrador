@@ -34,11 +34,12 @@ if(isset($_SESSION['login'])){
 
     <div class="contenedor_formulario">
     		<div class="wrap">
-    			<form action="" class="formulario" name="formulario-registro" method="post" enctype="multipart/form-data">
+    			<form action="" class="formulario" name="formulario_registro" method="post" enctype="multipart/form-data">
     				<div>
-    					<div class="input_group">
+    					<div class="input_group ingresar_nombre_reg">
     						<input class="inputs" type="text" id="nombre" name="nombre" value="<?php echo $usuario->nombre; ?>">
     						<label class="label" for="nombre">Nombre:</label>
+                            <span class="haserror" id="error_name"></span>
 
                    <?php if (isset($_POST['nombre'])): ?>
                     <?php if (isset($validador['nombre'])): ?>
@@ -49,22 +50,23 @@ if(isset($_SESSION['login'])){
 
     					</div>
 
-              <div class="input_group">
+              <div class="input_group ingresar_apellido_reg">
                 <input class="inputs" type="text" id="apellido" name="apellido" value="<?php echo $usuario->apellido ;?>">
                 <label class="label" for="apellido">Apellido:</label>
-
+                <span class="haserror" id="error_surname"></span>
                 <?php if (isset($_POST['apellido'])): ?>
                   <?php if (isset($validador['apellido'])): ?>
-                    <span id='register_name_errorloc' class='error'><?php echo $validador['apellido']; ?>
+                    <span id='register_surname_errorloc' class='error'><?php echo $validador['apellido']; ?>
                     </span>
                   <?php endif; ?>
                 <?php endif; ?>
 
               </div>
 
-    					<div class="input_group">
+    					<div class="input_group ingresar_email_reg">
     						<input class="inputs" type="email" id="correo" name="correo" value="<?php echo $usuario->email ;?>">
     						<label class="label" for="correo">Correo:</label>
+                            <span class="haserror" id="error_email"></span>
 
                   <?php if (isset($_POST['correo'])): ?>
                     <?php if (isset($validador['email'])): ?>
@@ -76,9 +78,10 @@ if(isset($_SESSION['login'])){
     					</div>
 
 
-    					<div class="input_group">
+    					<div class="input_group ingresar_password_reg">
     						<input class="inputs" type="password" id="pass" name="password">
     						<label class="label" for="password">Contraseña:</label>
+                            <span class="haserror" id="error_password"></span>
 
                 <?php if (isset($_POST['password'])): ?>
                   <?php if (isset($validador['pass'])): ?>
@@ -90,16 +93,18 @@ if(isset($_SESSION['login'])){
 
               </div>
 
-    					<div class="input_group">
+    					<div class="input_group ingresar_password2_reg">
     						<input class="inputs" type="password" id="password2" name="password2">
     						<label class="label" for="password2">Repetir Contraseña:</label>
+                            <span class="haserror" id="error_password2"></span>
     					</div>
 
 
 
-            <div class="input_group">
+            <div class="input_group ingresar_edad_reg">
                 <input class="inputs" type="text" id="edad" name="edad" value="<?php echo $usuario->edad ; ?>">
                 <label class="label" for="edad">Edad:</label>
+                <span class="haserror" id="error_edad"></span>
 
                 <?php if (isset($_POST['edad'])): ?>
                   <?php if (isset($validador['edad'])): ?>
@@ -114,28 +119,22 @@ if(isset($_SESSION['login'])){
 
                  <?php if (!isset($_POST['submit'])):?>
                     <div class="input_group checkbox">
-                      <input type="checkbox" name="sexo[]" id="hombre" value="hombre">
+                      <input type="radio" name="sexo" id="hombre" value="hombre">
                       <label for="hombre">Hombre</label>
-                      <input type="checkbox" name="sexo[]" id="mujer" value="mujer">
-                      <label for="mujer">Mujer</label>
+                      <input type="radio" name="sexo" id="mujer" value="mujer">
+                      <label for="mujer">Mujer</label><br>
+                      <span class="haserror" id="error_sexo"></span>
                     </div>
 
 
 
                   <?php elseif ($usuario->sexo == NULL): ?>
-                      <div class="input_group checkbox">
-                        <input type="checkbox" name="sexo[]" id="hombre" value="hombre">
+                      <div class="input_group checkbox radio">
+                        <input type="radio" name="sexo" id="hombre" value="hombre">
                         <label for="hombre">Hombre</label>
-                        <input type="checkbox" name="sexo[]" id="mujer" value="mujer">
-                        <label for="mujer">Mujer</label>
-                        <span id='register_password_errorloc' class='error' ><?php echo $validador['sexo'] ; ?></span>
-                      </div>
-                  <?php elseif (count($usuario->sexo) == 2): ?>
-                      <div class="input_group checkbox">
-                        <input type="checkbox" name="sexo[]" id="hombre" value="hombre" checked="">
-                        <label for="hombre">Hombre</label>
-                        <input type="checkbox" name="sexo[]" id="mujer" value="mujer" checked="">
-                        <label for="mujer">Mujer</label>
+                        <input type="radio" name="sexo" id="mujer" value="mujer">
+                        <label for="mujer">Mujer</label><br>
+                        <span class="haserror" id="error_sexo"></span>
                         <span id='register_password_errorloc' class='error' ><?php echo $validador['sexo'] ; ?></span>
                       </div>
 
@@ -143,15 +142,17 @@ if(isset($_SESSION['login'])){
                     <div class="input_group checkbox">
                         <?php foreach ($usuario->sexo as $value): ?>
                           <?php  if($value == "hombre") :?>
-                              <input type="checkbox" name="sexo[]" id="hombre" value="hombre" checked="">
+                              <input type="radio" name="sexo" id="hombre" value="hombre" checked="">
                               <label for="hombre">Hombre</label>
-                              <input type="checkbox" name="sexo[]" id="mujer" value="mujer">
-                              <label for="mujer">Mujer</label>
+                              <input type="radio" name="sexo" id="mujer" value="mujer">
+                              <label for="mujer">Mujer</label><br>
+                              <span class="haserror" id="error_sexo"></span>
                           <?php elseif ($value == "mujer") :?>
-                            <input type="checkbox" name="sexo[]" id="hombre" value="hombre">
+                            <input type="radio" name="sexo" id="hombre" value="hombre">
                             <label for="hombre">Hombre</label>
-                              <input type="checkbox" name="sexo[]" id="mujer" value="mujer" checked="">
-                              <label for="mujer">Mujer</label>
+                              <input type="radio" name="sexo" id="mujer" value="mujer" checked="">
+                              <label for="mujer">Mujer</label><br>
+                              <span class="haserror" id="error_sexo"></span>
                           <?php endif; ?>
                         <?php endforeach ;?>
                     </div>
@@ -167,14 +168,16 @@ if(isset($_SESSION['login'])){
                   <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
                   <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
-                  <label for="acompanante">Acompanante</label>
+                  <label for="acompanante">Acompanante</label><br>
+                  <span class="haserror" id="error_conductor_acomp"></span>
                 </div>
               <?php elseif ($usuario->accion == NULL): ?>
                 <div class="input_group checkbox">
                   <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
                   <label for="conductor">Conductor</label>
                   <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
-                  <label for="acompanante">Acompanante</label>
+                  <label for="acompanante">Acompanante</label><br>
+                  <span class="haserror" id="error_conductor_acomp"></span>
                   <span id='register_password_errorloc' class='error' ><?php echo $validador['accion'] ;?></span>
                 </div>
 
@@ -185,17 +188,20 @@ if(isset($_SESSION['login'])){
                         <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked="">
                         <label for="conductor">Conductor</label>
                         <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
-                        <label for="acompanante">Acompanante</label>
+                        <label for="acompanante">Acompanante</label><br>
+                        <span class="haserror" id="error_conductor_acomp"></span>
                   <?php elseif ($usuario->accion['conductor'] == '' && $usuario->accion['acompanante'] == 'acompanante') :?>
                         <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
                         <label for="conductor">Conductor</label>
                         <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante" checked="">
-                        <label for="acompanante">Acompanante</label>
+                        <label for="acompanante">Acompanante</label><br>
+                        <span class="haserror" id="error_conductor_acomp"></span>
                   <?php elseif ($usuario->accion['conductor'] == 'conductor' && $usuario->accion['acompanante'] == 'acompanante') :?>
                         <input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked="">
                         <label for="conductor">Conductor</label>
                         <input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante" checked="">
-                        <label for="acompanante">Acompanante</label>
+                        <label for="acompanante">Acompanante</label><br>
+                        <span class="haserror" id="error_conductor_acomp"></span>
                   <?php endif; ?>
 
                 </div>
@@ -206,17 +212,20 @@ if(isset($_SESSION['login'])){
               <?php if (!isset($_POST['submit'])):?>
                 <div class="input_group checkbox">
                   <input type="checkbox" name="terminos" id="terminos" value="terminos">
-                  <label for="terminos">Acepto los Términos y Condiciones</label>
+                  <label for="terminos">Acepto los Términos y Condiciones</label><br>
+                  <span class="haserror" id="error_acepte"></span>
                 </div>
               <?php elseif ($usuario->terminos) :?>
                 <div class="input_group checkbox">
                   <input type="checkbox" name="terminos" id="terminos" value="terminos" checked="">
-                  <label for="terminos">Acepto los Términos y Condiciones</label>
+                  <label for="terminos">Acepto los Términos y Condiciones</label><br>
+                  <span class="haserror" id="error_acepte"></span>
                 </div>
               <?php elseif ($usuario->terminos == NULL) :?>
                 <div class="input_group checkbox">
                   <input type="checkbox" name="terminos" id="terminos" value="terminos">
-                  <label for="terminos">Acepto los Términos y Condiciones</label>
+                  <label for="terminos">Acepto los Términos y Condiciones</label><br>
+                  <span class="haserror" id="error_acepte"></span>
                   <span id='register_password_errorloc' class='error' ><?php echo $validador['terminos'] ;?></span>
                 </div>
 
@@ -235,12 +244,13 @@ if(isset($_SESSION['login'])){
                 <?php endif; ?>
             </div>
 
-    					<input type="submit" id="btn_submit" value="Enviar" name='submit'>
+    					<input type="submit" id="btn_submit_reg" value="Enviar" name='submit'>
     				</div>
     			</form>
     		</div>
     	</div>
 
 <?php include 'footer.html' ;?>
+<script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>
