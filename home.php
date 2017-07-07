@@ -9,7 +9,9 @@
     <meta charset="utf-8">
     <title>autopool - Comparte tu viaje</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/paleta.css" id="paleta">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/d83e440824.js"></script>
     <link rel="icon"
       type="img/ico"
       href="img/favicon_autopool_16x16.ico">
@@ -100,7 +102,11 @@
           </section>
       </div>
     </div>
+    <div class="cant_usuarios">
+        <p></p>
+    </div>
     <?php include 'footer.html' ;?>
-
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/usuarios.js"></script>
   </body>
 </html>

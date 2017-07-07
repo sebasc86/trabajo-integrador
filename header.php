@@ -9,7 +9,9 @@ require_once 'php/controller-login.php';
     <meta charset="utf-8">
     <title>autopool - Comparte tu viaje</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/paleta.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/d83e440824.js"></script>
     <link rel="icon"
       type="img/ico"
       href="img/favicon_autopool_16x16.ico">
@@ -34,6 +36,7 @@ require_once 'php/controller-login.php';
             <li><a href="ingresar.php">Ingresar</a></li>
             <li><a href="ingresar.php">Mi Cuenta</a></li>
             <?php endif; ?>
+            <li><a href="#" class="icon"><span><i class="fa fa-asterisk" aria-hidden="true"></i></span></a></li>
           </ul>
           <a href="home.php">
           <img class="imagen" src="img/autopool_v2_w200.png" alt="autopool">

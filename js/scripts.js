@@ -1,29 +1,44 @@
-// Comentarios:
 
-// VER agregar validación para email
-// Ver los checkbox, el sexo está mal, debiera ser un radio (VER PARA No ROMPER)
 
 window.onload = function() {
 
     var formRegistro = document.formulario_registro;
     var formLogin = document.formulario_ingreso;
+    var cambiarPaleta = document.querySelector('.icon');
+    cambiarPaleta.addEventListener('click', function (){
+        cambiarPaletaCss();
+    }
+);
 
+function cambiarPaletaCss() {
+    var paleta = document.querySelector("#paleta");
+    var cssDoc = paleta.getAttribute("href");
+    if(cssDoc == "css/paleta.css") {
+        paleta.setAttribute("href","css/paleta2.css");
+    }
+    else {
+        paleta.setAttribute("href","css/paleta.css");
+    }
+}
 
     if(typeof formRegistro !== "undefined"){
         formRegistro.addEventListener('submit', function(evento) {
-            validarRegistro();
             evento.preventDefault();
+            if(validarRegistro().length == 0) {
+                formRegistro.submit();
+            }
+
+
 
         });
     }
 
 
     if(typeof formLogin !== "undefined"){
-        console.log(formLogin);
         formLogin.addEventListener('submit', function(evento) {
-            evento.preventDefault();
             validarLogin();
-
+            return !validarRegistro();
+            evento.preventDefault();
         });
     }
 
@@ -99,12 +114,8 @@ window.onload = function() {
             errorAcepte.innerText = 'Por favor acepte los términos y condiciones';
             errors.push(errorAcepte.innerText);
         }
-         if(!errors.length > 0) {
-             redirect(window.location.href);
 
-         }
-
-
+        return errors;
     }
 
     function validarLogin() {
@@ -116,13 +127,19 @@ window.onload = function() {
         errorEmail.innerText = '';
         errorPassword.innerText = '';
 
+        var errors = [];
 
         if (emailVal == '' || emailVal.length == 0) {
             errorEmail.innerText = 'Por favor ingrese su email';
+            errors.push(errorEmail.innerText);
+
         }
         if (passwordVal == '' || passwordVal.length == 0) {
             errorPassword.innerText = 'Por favor ingrese su contraseña';
+            errors.push(errorPassword.innerText);
         }
+
+        return errors;
 
     }
 

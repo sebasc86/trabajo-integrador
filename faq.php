@@ -5,6 +5,7 @@
     <title>autopool - Comparte tu viaje</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="icon"
       type="img/ico"
       href="img/favicon_autopool_16x16.ico">
