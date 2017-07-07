@@ -99,8 +99,7 @@ window.onload = function() {
             errorAcepte.innerText = 'Por favor acepte los términos y condiciones';
             errors.push(errorAcepte.innerText);
         }
-         if(errors.length > 0) {
-             console.log("entro al if");
+         if(!errors.length > 0) {
              redirect(window.location.href);
 
          }
