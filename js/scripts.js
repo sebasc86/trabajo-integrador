@@ -11,8 +11,19 @@ window.onload = function() {
 
     if(typeof formRegistro !== "undefined"){
         formRegistro.addEventListener('submit', function(evento) {
-            validarRegistro();
             evento.preventDefault();
+
+
+
+            if(validarRegistro().length > 0){
+              console.log("hay errores")
+              console.log(validarRegistro())
+            } else {
+              console.log("esta validado");
+            formRegistro.submit()
+
+          }
+
 
         });
     }
@@ -30,6 +41,7 @@ window.onload = function() {
 
 
     function validarRegistro() {
+      console.log(8);
         var nombreVal = formRegistro.nombre.value;
         var errorNombre = document.querySelector('#error_name');
         var apellidoVal = formRegistro.apellido.value;
@@ -99,10 +111,13 @@ window.onload = function() {
             errorAcepte.innerText = 'Por favor acepte los términos y condiciones';
             errors.push(errorAcepte.innerText);
         }
-         if(!errors.length > 0) {
-             redirect(window.location.href);
 
-         }
+        return errors;
+
+        //  if(!errors.length > 0) {
+        //      redirect(window.location('localhost/xampp/trabajo-integrador/registro.php'));
+         //
+        //  }
 
 
     }

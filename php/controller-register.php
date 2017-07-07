@@ -19,7 +19,6 @@ $usuario = new Usuario($db);
 $usuario->toModel($_POST);
 $usuario->agregarImagen($_FILES);
 $validador = new ValidadorRegistro();
-
 $validador = $validador->validar($usuario);
 $usuario->save($usuario);
 //var_dump($usuario->imagen['imgPerfil']);
