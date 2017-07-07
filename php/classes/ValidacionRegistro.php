@@ -134,8 +134,6 @@ class ValidadorRegistro extends Validador {
 			if (isset($_POST['submit'])){
 					if(!isset($usuario->sexo)){
 				     self::$errors['sexo'] = 'Tiene que elegir una opción';
-				   } elseif(isset($usuario->sexo[0]) && isset($usuario->sexo[1])){
-				     self::$errors['sexo'] = 'No puede elegir las dos opciones';
 				   }
 			}
 			// validar accion;

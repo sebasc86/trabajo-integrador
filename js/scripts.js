@@ -30,6 +30,18 @@ function cambiarPaletaCss() {
 
 
 
+
+
+            if(validarRegistro().length > 0){
+              console.log("hay errores")
+              console.log(validarRegistro())
+            } else {
+              console.log("esta validado");
+            formRegistro.submit()
+
+          }
+
+
         });
     }
 
@@ -45,6 +57,7 @@ function cambiarPaletaCss() {
 
 
     function validarRegistro() {
+      console.log(8);
         var nombreVal = formRegistro.nombre.value;
         var errorNombre = document.querySelector('#error_name');
         var apellidoVal = formRegistro.apellido.value;
@@ -116,6 +129,7 @@ function cambiarPaletaCss() {
         }
 
         return errors;
+
     }
 
     function validarLogin() {

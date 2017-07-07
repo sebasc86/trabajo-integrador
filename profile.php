@@ -99,23 +99,23 @@
 
 
 
-							<div class="input_group checkbox">
-								<?php if ($_SESSION['accion']['conductor'] != NULL ): ?>
+							<!-- <div class="input_group checkbox">
+								<?php //if ($_SESSION['accion']['conductor'] != NULL ): ?>
 									<input type="checkbox" name="accion[conductor]" id="conductor" value="conductor" checked=''>
-								<?php else: ?>
+								<?php// else: ?>
 									<input type="checkbox" name="accion[conductor]" id="conductor" value="conductor">
-								<?php endif; ?>
+								<?php //endif; ?>
 									<label for="conductor">Conductor</label>
 
-								<?php if ($_SESSION['accion']['acompanante'] != NULL): ?>
+								<?php //if ($_SESSION['accion']['acompanante'] != NULL): ?>
 									<input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante" checked=''>
-								<?php else: ?>
+								<?php //else: ?>
 									<input type="checkbox" name="accion[acompanante]" id="acompanante" value="acompanante">
-								<?php endif; ?>
+								<?php //endif; ?>
 
 
 								<label for="acompanante">Acompanante</label>
-							</div>
+							</div> -->
 
 							 <input type="submit" id="btn_submit" value="Enviar" name='submit'>
 						</div>
