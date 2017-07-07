@@ -27,30 +27,16 @@ function cambiarPaletaCss() {
             if(validarRegistro().length == 0) {
                 formRegistro.submit();
             }
-
-
-
-
-
-            if(validarRegistro().length > 0){
-              console.log("hay errores")
-              console.log(validarRegistro())
-            } else {
-              console.log("esta validado");
-            formRegistro.submit()
-
-          }
-
-
         });
     }
 
 
     if(typeof formLogin !== "undefined"){
         formLogin.addEventListener('submit', function(evento) {
-            validarLogin();
-            return !validarRegistro();
             evento.preventDefault();
+            if(validarLogin().length == 0) {
+                formLogin.submit();
+            }
         });
     }
 
