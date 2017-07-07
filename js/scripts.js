@@ -11,8 +11,8 @@ window.onload = function() {
 
     if(typeof formRegistro !== "undefined"){
         formRegistro.addEventListener('submit', function(evento) {
-            evento.preventDefault();
             validarRegistro();
+            evento.preventDefault();
 
         });
     }
@@ -61,34 +61,49 @@ window.onload = function() {
         errorConductorAcomp.innerText = '';
         errorAcepte.innerText = '';
 
+        var errors = [];
 
         if (nombreVal == '' || nombreVal.length == 0) {
             errorNombre.innerText = 'Por favor ingrese su nombre';
+            errors.push(errorNombre.innerText);
         }
         if (apellidoVal == '' || apellidoVal.length == 0) {
             errorApellido.innerText = 'Por favor ingrese su apellido';
+            errors.push(errorApellido.innerText);
         }
         if (emailVal == '' || emailVal.length == 0) {
             errorEmail.innerText = 'Por favor ingrese su email';
+            errors.push(errorEmail.innerText);
         }
         if (passwordVal == '' || passwordVal.length == 0) {
             errorPassword.innerText = 'Por favor ingrese su contraseña';
+            errors.push(errorPassword.innerText);
         }
         if (password2Val == '' || password2Val.length == 0) {
             errorPassword2.innerText = 'Por favor repita su contraseña';
+            errors.push(errorPassword2.innerText);
         }
         if (edadVal == '' || password2Val.length == 0) {
             errorEdad.innerText = 'Por favor ingrese su edad';
+            errors.push(errorEdad.innerText);
         }
         if ((sexoMVal == false && sexoFVal == false) || (sexoMVal.length == 0 && sexoFVal.length == 0)) {
             errorSexo.innerText = 'Por favor indique su sexo';
+            errors.push(errorSexo.innerText);
         }
         if ((conductorVal == false && acompVal == false) || (conductorVal.length == 0 && acompVal.length == 0)) {
             errorConductorAcomp.innerText = 'Por favor indique si es conductor, acompañante o ambos';
+            errors.push(errorConductorAcomp.innerText);
         }
         if (acepteVal == false || acepteVal.length == 0) {
             errorAcepte.innerText = 'Por favor acepte los términos y condiciones';
+            errors.push(errorAcepte.innerText);
         }
+         if(errors.length > 0) {
+             console.log("entro al if");
+             redirect(window.location.href);
+
+         }
 
 
     }
