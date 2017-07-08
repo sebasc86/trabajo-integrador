@@ -246,11 +246,9 @@ if(isset($_SESSION['login'])){
                 <?php endif; ?>
             </div>
 
-<<<<<<< HEAD
+
     					<input type="submit" id="btn_submit_reg" value="Enviar" name='submit_reg'>
-=======
-    					<input type="submit" id="btn_submit_reg" value="Enviar" name='btnSubmit'>
->>>>>>> e51651cf149233ae539f7be6f497b9f88a80cc9f
+
     				</div>
     			</form>
     		</div>
