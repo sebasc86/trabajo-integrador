@@ -9,7 +9,7 @@ require_once 'php/controller-login.php';
     <meta charset="utf-8">
     <title>autopool - Comparte tu viaje</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/paleta.css">
+    <link rel="stylesheet" href="css/paleta.css" id="paleta">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://use.fontawesome.com/d83e440824.js"></script>
     <link rel="icon"
